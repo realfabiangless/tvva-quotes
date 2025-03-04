@@ -1,0 +1,732 @@
+{
+  "default_text.after_discount.default" : {
+    "message" : "<span class=\"discount-notice highlighted\">после {{ discount_amount }} применения скидки</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.after_discount.label" : {
+    "message" : "после применения скидки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.default" : {
+    "message" : "Ежегодный",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.label" : {
+    "message" : "Ежегодный",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.default" : {
+    "message" : "Ежегодно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.label" : {
+    "message" : "Ежегодно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.default" : {
+    "message" : "день",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.label" : {
+    "message" : "День",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.default" : {
+    "message" : "дней",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.label" : {
+    "message" : "Дней",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.default" : {
+    "message" : "в месяц",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.label" : {
+    "message" : "/ месяц",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.default" : {
+    "message" : "за квартал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.label" : {
+    "message" : "/ квартал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.default" : {
+    "message" : "за 6 месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.label" : {
+    "message" : "за 6 месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.default" : {
+    "message" : "за 3 года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.label" : {
+    "message" : "за 3 года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.default" : {
+    "message" : "за 2 года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.label" : {
+    "message" : "за 2 года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.default" : {
+    "message" : "в год",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.label" : {
+    "message" : "/ год",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.default" : {
+    "message" : "Первый платеж: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.label" : {
+    "message" : "Дата первого платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.default" : {
+    "message" : "за {{ unit.hs_term_in_months }} месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.label" : {
+    "message" : "на месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.default" : {
+    "message" : "за {{ year }} {{ year_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.label" : {
+    "message" : "на лет",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.default" : {
+    "message" : "подитог {{ frequency_text }} ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.label" : {
+    "message" : "промежуточный итог по периодичности",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.default" : {
+    "message" : "Будущие платежи",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.label" : {
+    "message" : "Будущие платежи",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.default" : {
+    "message" : "{{ formatted_price }} в {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.label" : {
+    "message" : "Будущая одноразовая отсрочка даты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.default" : {
+    "message" : "{{ formatted_price }} надлежащий {{ billing_delay_period }} {{ billing_delay_unit }} после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.label" : {
+    "message" : "Будущая одноразовая относительная отсрочка",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }}, начиная {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.label" : {
+    "message" : "Будущая отсрочка даты регулярного платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} начиная {{ formatted_first_payment_date }} для {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.label" : {
+    "message" : "Будущая фиксированная отсрочка даты регулярного платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} начиная {{ billing_delay_period }} {{ billing_delay_unit }} после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.label" : {
+    "message" : "Будущая относительная отсрочка даты регулярного платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} начиная {{ billing_delay_period }} {{ billing_delay_unit }} после платежа для {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.label" : {
+    "message" : "Будущая фиксированная относительная отсрочка даты регулярного платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Текст по умолчанию",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.default" : {
+    "message" : "месяц",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.label" : {
+    "message" : "Месяц",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.default" : {
+    "message" : "Ежемесячно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.label" : {
+    "message" : "Ежемесячно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.default" : {
+    "message" : "мес.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.label" : {
+    "message" : "Месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.default" : {
+    "message" : "Однократн.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.label" : {
+    "message" : "Однократн.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.default" : {
+    "message" : "платеж",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.label" : {
+    "message" : "Оплата",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.default" : {
+    "message" : "Срок совершения платежа: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.label" : {
+    "message" : "Срок оплаты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.default" : {
+    "message" : "Начало процесса оплаты: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.label" : {
+    "message" : "Дата начала оплаты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.default" : {
+    "message" : "платежи",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.label" : {
+    "message" : "Платежи",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.default" : {
+    "message" : "За шесть месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.label" : {
+    "message" : "За шесть месяцев",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.default" : {
+    "message" : "За три года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.label" : {
+    "message" : "За три года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.default" : {
+    "message" : "За два года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.label" : {
+    "message" : "За два года",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.default" : {
+    "message" : "скидка {{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.label" : {
+    "message" : "Скидка в процентах",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.default" : {
+    "message" : "Сбор {{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.label" : {
+    "message" : "Сбор в процентах",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.default" : {
+    "message" : "Налог {{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.label" : {
+    "message" : "Налог в процентах",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.default" : {
+    "message" : "{{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.label" : {
+    "message" : "значение в процентах",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.default" : {
+    "message" : "Ежеквартально",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.label" : {
+    "message" : "Ежеквартально",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.default" : {
+    "message" : "Срок совершения платежа: {{ billing_delay_period }} {{ billing_delay_unit }} после оплаты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.label" : {
+    "message" : "Срок оплаты после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.default" : {
+    "message" : "Срок оплаты: {{ billing_delay_period }} {{ billing_delay_unit }} после оформления заказа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.label" : {
+    "message" : "Срок оплаты после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.default" : {
+    "message" : "Дата начала оплаты: {{ billing_delay_period }} {{ billing_delay_unit }} после оплаты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.label" : {
+    "message" : "Дата начала оплаты после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.default" : {
+    "message" : "Первый платеж: {{ billing_delay_period }} {{ billing_delay_unit }} после оформления заказа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.label" : {
+    "message" : "Дата начала оплаты после платежа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.default" : {
+    "message" : "в год",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.label" : {
+    "message" : "Год",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.default" : {
+    "message" : "лет",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.label" : {
+    "message" : "Лет",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_heading.label" : {
+    "message" : "Отображать заголовок таблицы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_other_fees.label" : {
+    "message" : "Отобразить другие сборы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotal_title.label" : {
+    "message" : "Отобразить заголовок промежуточных итогов",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotals.label" : {
+    "message" : "Отобразить промежуточные итоги",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_totals.label" : {
+    "message" : "Отобразить «Итого»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.default" : {
+    "message" : "Подлежит оплате сейчас",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.inline_help_text" : {
+    "message" : "Этот ярлык заменяет «Текст общей суммы», если после оформления заказа необходимо произвести оплату.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.label" : {
+    "message" : "Текст поля «Подлежит оплате сейчас»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_charges.label" : {
+    "message" : "Будущие сборы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.label" : {
+    "message" : "Столбцы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.default" : {
+    "message" : "Позиция",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.label" : {
+    "message" : "Заголовок названия ценового предложения",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.default" : {
+    "message" : "Оплата",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.label" : {
+    "message" : "Заголовок сводки платежей",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.display_heading.label" : {
+    "message" : "Отображать заголовок таблицы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.default" : {
+    "message" : "Сводка будущих платежей",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.inline_help_text" : {
+    "message" : "Добавить заголовок в таблицу сводки будущих платежей",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.label" : {
+    "message" : "Заголовок таблицы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.inline_help_text" : {
+    "message" : "Сводная таблица будущих платежей отображается только в случае, если ценовое предложение содержит сочетание позиций, подлежащих оплате при оформлении заказа, и позиций, подлежащих оплате в будущем.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.label" : {
+    "message" : "Таблица сводки будущих платежей",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "Продукты и услуги",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "Добавить заголовок в таблицу позиций",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Заголовок таблицы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.amount" : {
+    "message" : "Итоговая сумма",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.description" : {
+    "message" : "Описание",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.discount" : {
+    "message" : "Скидка на единицу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_cost_of_goods_sold" : {
+    "message" : "Стоимость единицы товара",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_images" : {
+    "message" : "Изображение",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_recurring_billing_start_date" : {
+    "message" : "Дата начала",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_sku" : {
+    "message" : "SKU позиции",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_term_in_months" : {
+    "message" : "Срок",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_url" : {
+    "message" : "URL-адрес",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.item_description" : {
+    "message" : "Товар и описание",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.name" : {
+    "message" : "Название позиции",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.price" : {
+    "message" : "Цена единицы товара",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity" : {
+    "message" : "Количество позиций",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity_amount" : {
+    "message" : "Количество и общий итог",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.recurringbillingfrequency" : {
+    "message" : "Периодичность выставления счетов",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.label" : {
+    "message" : "Выберите свойство столбца",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.inline_help_text" : {
+    "message" : "Добавить заголовок в свой столбец",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.label" : {
+    "message" : "Название столбца",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.placeholder" : {
+    "message" : "Описание столбца",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.label" : {
+    "message" : "Столбец позиций",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.background_color.label" : {
+    "message" : "Цвет фона",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.default" : {
+    "message" : "Позиции к оплате позже",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.label" : {
+    "message" : "Текст поля «Подлежит оплате позже»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.default" : {
+    "message" : "Позиции к оплате сейчас",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.label" : {
+    "message" : "Текст поля «Подлежит оплате сейчас»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.font_style.label" : {
+    "message" : "Стиль шрифта",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.label" : {
+    "message" : "Подзаголовки по позициям",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Line items table",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.default" : {
+    "message" : "Другие сборы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.label" : {
+    "message" : "Текст других сборов",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.default" : {
+    "message" : "Промежуточные суммы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.label" : {
+    "message" : "Заголовок промежуточной суммы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.default" : {
+    "message" : "Итоговая сумма",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.label" : {
+    "message" : "Текст общей суммы",
+    "description" : "",
+    "placeholders" : null
+  }
+}

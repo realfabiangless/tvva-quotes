@@ -1,0 +1,732 @@
+{
+  "default_text.after_discount.default" : {
+    "message" : "<span class=\"discount-notice highlighted\">efter {{ discount_amount }} rabatt</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.after_discount.label" : {
+    "message" : "efter rabatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.default" : {
+    "message" : "Årsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.label" : {
+    "message" : "Årsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.default" : {
+    "message" : "Årsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.label" : {
+    "message" : "Årsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.default" : {
+    "message" : "dag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.label" : {
+    "message" : "Dag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.default" : {
+    "message" : "dagar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.label" : {
+    "message" : "Dagar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.default" : {
+    "message" : "/ månad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.label" : {
+    "message" : "/ månad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.default" : {
+    "message" : "/ kvartal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.label" : {
+    "message" : "/ kvartal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.default" : {
+    "message" : "/ 6 månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.label" : {
+    "message" : "/6 månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.default" : {
+    "message" : "/ 3 år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.label" : {
+    "message" : "/3 år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.default" : {
+    "message" : "/ 2 år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.label" : {
+    "message" : "/2 år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.default" : {
+    "message" : "/ år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.label" : {
+    "message" : "/ år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.default" : {
+    "message" : "Första betalning: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.label" : {
+    "message" : "Första betalningsdatum",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.default" : {
+    "message" : "i {{ unit.hs_term_in_months }} månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.label" : {
+    "message" : "i flera månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.default" : {
+    "message" : "i {{ year }} {{ year_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.label" : {
+    "message" : "i åratal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.default" : {
+    "message" : "{{ frequency_text }} delsumma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.label" : {
+    "message" : "frekvens delsumma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.default" : {
+    "message" : "Framtida betalningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.label" : {
+    "message" : "Framtida betalningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.default" : {
+    "message" : "{{ formatted_price }} den {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.label" : {
+    "message" : "Framtida försening av engångsdatum",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.default" : {
+    "message" : "{{ formatted_price }} förfaller {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.label" : {
+    "message" : "Framtida engångs relativfördröjning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} startar den {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.label" : {
+    "message" : "Framtida återkommande datumfördröjning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} startar den {{ formatted_first_payment_date }} för {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.label" : {
+    "message" : "Framtida återkommande datumfördröjning fastställd",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} startar {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.label" : {
+    "message" : "Framtida återkommande relativfördröjning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} startar {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning för {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.label" : {
+    "message" : "Framtida återkommande relativfördröjning fastställd",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Standardtext",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.default" : {
+    "message" : "månad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.label" : {
+    "message" : "Månad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.default" : {
+    "message" : "Månadsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.label" : {
+    "message" : "Månadsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.default" : {
+    "message" : "månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.label" : {
+    "message" : "Månader",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.default" : {
+    "message" : "Engångs",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.label" : {
+    "message" : "En gång",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.default" : {
+    "message" : "betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.label" : {
+    "message" : "Betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.default" : {
+    "message" : "Betalning senast den: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.label" : {
+    "message" : "Förfallodatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.default" : {
+    "message" : "Betalning startar: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.label" : {
+    "message" : "Startdatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.default" : {
+    "message" : "betalningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.label" : {
+    "message" : "Betalningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.default" : {
+    "message" : "Var 6:e månad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.label" : {
+    "message" : "Varje halvår",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.default" : {
+    "message" : "Vart 3:e år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.label" : {
+    "message" : "Vart 3:e år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.default" : {
+    "message" : "Varannat år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.label" : {
+    "message" : "Varannat år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.default" : {
+    "message" : "{{ fee_amount }}% rabatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.label" : {
+    "message" : "procent rabatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.default" : {
+    "message" : "{{ fee_amount }} % avgift",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.label" : {
+    "message" : "Procent avgift",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.default" : {
+    "message" : "{{ fee_amount }} % skatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.label" : {
+    "message" : "Procent skatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.default" : {
+    "message" : "{{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.label" : {
+    "message" : "procentvärde",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.default" : {
+    "message" : "Kvartalsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.label" : {
+    "message" : "Kvartalsvis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.default" : {
+    "message" : "Betalning förfaller den: {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.label" : {
+    "message" : "Relativt förfallodatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.default" : {
+    "message" : "Betalning förfaller den: {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.label" : {
+    "message" : "Relativt förfallodatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.default" : {
+    "message" : "Betalning startar den: {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.label" : {
+    "message" : "Relativt startdatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.default" : {
+    "message" : "Betalning börjar: {{ billing_delay_period }} {{ billing_delay_unit }} efter betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.label" : {
+    "message" : "Relativt startdatum för betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.default" : {
+    "message" : "år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.label" : {
+    "message" : "År",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.default" : {
+    "message" : "år",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.label" : {
+    "message" : "År",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_heading.label" : {
+    "message" : "Visa tabellrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_other_fees.label" : {
+    "message" : "Visa andra avgifter",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotal_title.label" : {
+    "message" : "Visa delsumsrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotals.label" : {
+    "message" : "Visa delsummor",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_totals.label" : {
+    "message" : "Visa summor",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.default" : {
+    "message" : "Förfaller nu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.inline_help_text" : {
+    "message" : "Den här etiketten ersätter \"Total text\" när det finns betalningar som ska betalas efter kassan.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.label" : {
+    "message" : "Text som förfaller nu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_charges.label" : {
+    "message" : "Framtida debiteringar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.label" : {
+    "message" : "Kolumner",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.default" : {
+    "message" : "Artikel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.label" : {
+    "message" : "Visa namnrubrik för radföremål",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.default" : {
+    "message" : "Betalning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.label" : {
+    "message" : "Rubrik för betalningssammanfattning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.display_heading.label" : {
+    "message" : "Visa tabellrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.default" : {
+    "message" : "Sammanfattning av framtida betalningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.inline_help_text" : {
+    "message" : "Lägg till en rubrik till tabellen med framtida betalningssammanfattningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.label" : {
+    "message" : "Tabellrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.inline_help_text" : {
+    "message" : "Tabellen över framtida betalningssammanfattningar är endast synlig när en offert har en blandning av radföremål som förfaller i kassan och radföremål som förfaller i framtiden.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.label" : {
+    "message" : "Tabell över framtida betalningssammanfattningar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "Produkter och tjänster",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "Lägg till en rubrik till tabellen med radföremål",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Tabellrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.amount" : {
+    "message" : "Totalt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.description" : {
+    "message" : "Beskrivning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.discount" : {
+    "message" : "Enhetsrabatt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_cost_of_goods_sold" : {
+    "message" : "Kostnad per enhet",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_images" : {
+    "message" : "Bild",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_recurring_billing_start_date" : {
+    "message" : "Startdatum",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_sku" : {
+    "message" : "Artikelns lagerenheter",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_term_in_months" : {
+    "message" : "Term",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_url" : {
+    "message" : "URL",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.item_description" : {
+    "message" : "Föremål och beskrivning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.name" : {
+    "message" : "Artikelnamn",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.price" : {
+    "message" : "Enhetspris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity" : {
+    "message" : "Artikelkvantitet",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity_amount" : {
+    "message" : "Kvantitet och totalt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.recurringbillingfrequency" : {
+    "message" : "Faktureringsfrekvens",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.label" : {
+    "message" : "Välj kolumnegenskap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.inline_help_text" : {
+    "message" : "Lägg till en rubrik till din spalt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.label" : {
+    "message" : "Kolumnrubrik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.placeholder" : {
+    "message" : "Kolumnbeskrivning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.label" : {
+    "message" : "Kolumn för radföremål",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.background_color.label" : {
+    "message" : "Bakgrundsfärg",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.default" : {
+    "message" : "Objekt som förfaller senare",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.label" : {
+    "message" : "Text för förfaller senare",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.default" : {
+    "message" : "Objekt som förfaller nu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.label" : {
+    "message" : "Text som förfaller nu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.font_style.label" : {
+    "message" : "Teckensnittsstil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.label" : {
+    "message" : "Underrubriker på radföremå",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Radföremålstabell",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.default" : {
+    "message" : "Andra avgifter",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.label" : {
+    "message" : "Övrig avgiftstext",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.default" : {
+    "message" : "Subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.label" : {
+    "message" : "Titel på delsumma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.default" : {
+    "message" : "Totalt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.label" : {
+    "message" : "Total text",
+    "description" : "",
+    "placeholders" : null
+  }
+}

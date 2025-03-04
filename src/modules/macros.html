@@ -1,0 +1,7 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+{% macro render_color(color) -%}
+  rgba({{color.color|convert_rgb}}, {{color.opacity != null ? color.opacity / 100 : 1}})
+{%- endmacro %}

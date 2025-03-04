@@ -1,0 +1,69 @@
+{% from '../../imports/mock_data.html' import SAMPLE_TEMPLATE_DATA as mock_data %}
+
+{% set template_data = template_data || mock_data %}
+{% set module_data = template_data.module_data %}
+{% set QUOTE = template_data.quote || mock_data.quote %}
+{% set ASSOCIATED_OBJECTS = QUOTE.associated_objects %}
+{% set LINE_ITEMS = ASSOCIATED_OBJECTS.line_items_by_start_date ? ASSOCIATED_OBJECTS.line_items_by_start_date.PRESENT : ASSOCIATED_OBJECTS.line_items %}
+
+
+{% set properties_data = {} %}
+{% for i in module.table.properties %}
+  {% set property_name = i.display %}
+  {% set property_value = i.value|lower %}
+  {% set property_info = { "name": property_name, "value": property_value } %}
+  {% do properties_data.put(property_value, property_info) %}
+{% endfor %}
+
+{% for item in LINE_ITEMS %}
+  {% if item.intention_innerhalb_angebot == "Empfehlung" %}
+    {% do item.put("sort", 1) %}
+  {% elif item.intention_innerhalb_angebot == "Alternative 1" %}
+    {% do item.put("sort", 2) %}
+  {% elif item.intention_innerhalb_angebot == "Alternative 2" %}
+    {% do item.put("sort", 3) %}
+  {% else %}
+    {% do item.put("sort", 4) %}
+  {% endif %}
+{% endfor %}
+
+{% set overall = {val : 0} %}
+
+<div class="t-table-wrapper t-table-additional linebreak">
+  <div class="t-table">
+    <div class="t-column static">
+      <div class="t-cell t-select_item">
+       {#Empty cell for name row#}
+      </div>
+      {% for i in properties_data %}
+      <div class="t-cell static">
+        <p>{{ i.name }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="t-table-scroll">
+       {% for item in LINE_ITEMS|sort(false, false, "sort") %}
+        <div class="t-column t-filter-product {% if item["intention_innerhalb_angebot"] == "Empfehlung" %} positive {% elif item["intention_innerhalb_angebot"] == "Negativ Beispiel" %} negative {% endif %}"
+           {% for property in module.properties %}data-{{property.property}}="{{ item[property.property] }}"{% endfor %}   
+          >
+          <div class="t-cell t-select_item t-text-center">
+            <h2>{{ item["intention_innerhalb_angebot"] }}</h2>
+          </div>
+          {% for property in properties_data %}
+          <div class="t-cell dynamic">
+            {% if item[property.value] == "true" or item[property.value] == "ja" %}
+              <img class="t-cell-image" src="{{ module.table.image_true.src }}" width="15px" height="15px" alt="{{ module.table.image_true.alt }}">
+            {% elif item[property.value] == "false" or item[property.value] == "nein" %}
+              <img class="t-cell-image" src="{{ module.table.image_false.src }}" width="15px" height="15px" alt="{{ module.table.image_false.alt }}">
+            {% else %}
+              <p>{{ item[property.value]|truncate(30) }}</p>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% do overall.update({val: overall.val + 1 }) %}
+     
+      {% endfor %}
+    </div>
+  </div>
+</div>

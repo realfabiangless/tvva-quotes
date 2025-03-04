@@ -1,0 +1,172 @@
+{
+  "amount": {
+    "message": "Znesek",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Komentarji",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Komentarji od",
+    "description": "",
+    "placeholders": null
+  },
+  "expired_title": {
+    "message": "Ta kvota je potekla",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Izdelek in opis",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Druge pristojbine",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Pripravil:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Cena",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Izdelki in storitve",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Pogoji nakupa",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Količina",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Ponudba ustvarjena:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Vmesni seštevki",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Skupaj",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Cena na enoto",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Račun",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Številka računa",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Datum računa",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Vse pristojbine so navedene v {{ currency_code }} in so predmet davka od prodaje (kot je ustrezno).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "Številka naročila",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Tabela vrstic računov",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "po {{ discount_amount }}popustu",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Količina",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Zaračunati",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Rok",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "popust",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "{{ fee_amount }} % popust",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "{{ fee_amount }} % popusta",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "{{ fee_amount }} %",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Vmesni seštevek",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Prihodnja plačila",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Plačila, ki zapadejo pozneje.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Povzetek",
+    "description": "",
+    "placeholders": null
+  }
+}

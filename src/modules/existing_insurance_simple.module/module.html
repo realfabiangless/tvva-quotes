@@ -1,0 +1,15 @@
+{% import '../macros.html' %}
+
+{% set QUOTE = template_data.quote || mock_data.quote %}
+{% set ASSOCIATED_OBJECTS = QUOTE.associated_objects %}
+{% set DEAL = ASSOCIATED_OBJECTS.deal %}
+
+{% set ANIMAL = DEAL.associated_objects.custom_objects["_2_114893978"][0] %}
+
+{% set animalBreed = ANIMAL["rasse__standardisiert_"] %}
+
+{% if module.text and animalBreed not in module.no_display_breeds %}
+  <div class="t-existing_insurance" style="background-color: {{ render_color(module.background_color) }}; border: {{ module.border_width }}px solid {{ module.border_color.color }}">   
+    {{ module.text }}
+  </div>
+{% endif %}

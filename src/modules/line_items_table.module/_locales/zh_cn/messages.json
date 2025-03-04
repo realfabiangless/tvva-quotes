@@ -1,0 +1,732 @@
+{
+  "default_text.after_discount.default" : {
+    "message" : "<span class=\"discount-notice highlighted\">{{ discount_amount }} 折扣后</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.after_discount.label" : {
+    "message" : "在折扣后",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.default" : {
+    "message" : "年度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.label" : {
+    "message" : "年度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.default" : {
+    "message" : "年度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.label" : {
+    "message" : "年度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.default" : {
+    "message" : "天",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.label" : {
+    "message" : "天",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.default" : {
+    "message" : "天",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.label" : {
+    "message" : "天",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.default" : {
+    "message" : "/月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.label" : {
+    "message" : "/月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.default" : {
+    "message" : "/季度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.label" : {
+    "message" : "/季度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.default" : {
+    "message" : "/6 个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.label" : {
+    "message" : "/6 个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.default" : {
+    "message" : "/3 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.label" : {
+    "message" : "/3 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.default" : {
+    "message" : "/2 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.label" : {
+    "message" : "/2 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.default" : {
+    "message" : "/年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.label" : {
+    "message" : "/年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.default" : {
+    "message" : "首次付款：{{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.label" : {
+    "message" : "首次付款日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.default" : {
+    "message" : "{{ unit.hs_term_in_months }} 个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.label" : {
+    "message" : "为期数月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.default" : {
+    "message" : "{{ year }} {{ year_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.label" : {
+    "message" : "为期数年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.default" : {
+    "message" : "{{ frequency_text }}小计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.label" : {
+    "message" : "频率小计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.default" : {
+    "message" : "未来付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.label" : {
+    "message" : "未来付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.default" : {
+    "message" : "{{ formatted_price }}，日期：{{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.label" : {
+    "message" : "未来一次日期延迟",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.default" : {
+    "message" : "{{ formatted_price }} 在付款后 {{ billing_delay_period }} {{ billing_delay_unit }} 到期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.label" : {
+    "message" : "未来一次相对延迟",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.default" : {
+    "message" : "{{ formatted_first_payment_date }}起，{{ formatted_price }} {{ recurring_frequency }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.label" : {
+    "message" : "未来定期日期延迟",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.default" : {
+    "message" : "{{ formatted_first_payment_date }}起，{{ formatted_price }} {{ recurring_frequency }}，{{ number_of_payments }} 次{{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.label" : {
+    "message" : "未来定期日期延迟固定",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.default" : {
+    "message" : "付款后 {{ billing_delay_period }} 个 {{ billing_delay_unit }}开始，{{ formatted_price }} {{ recurring_frequency }} ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.label" : {
+    "message" : "未来定期相对延迟",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.default" : {
+    "message" : "付款后 {{ billing_delay_period }} 个 {{ billing_delay_unit }}开始，{{ formatted_price }} {{ recurring_frequency }}，{{ number_of_payments }} 次 {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.label" : {
+    "message" : "未来定期相对延迟固定",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "默认文本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.default" : {
+    "message" : "月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.label" : {
+    "message" : "月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.default" : {
+    "message" : "每月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.label" : {
+    "message" : "每月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.default" : {
+    "message" : "个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.label" : {
+    "message" : "月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.default" : {
+    "message" : "一次性",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.label" : {
+    "message" : "一次性",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.default" : {
+    "message" : "次付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.label" : {
+    "message" : "付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.default" : {
+    "message" : "付款到期日期：{{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.label" : {
+    "message" : "付款到期日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.default" : {
+    "message" : "付款开始日期：{{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.label" : {
+    "message" : "付款开始日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.default" : {
+    "message" : "次付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.label" : {
+    "message" : "付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.default" : {
+    "message" : "每 6 个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.label" : {
+    "message" : "每 6 个月",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.default" : {
+    "message" : "每 3 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.label" : {
+    "message" : "每 3 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.default" : {
+    "message" : "每 2 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.label" : {
+    "message" : "每 2 年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.default" : {
+    "message" : "{{ fee_amount }}% 的折扣",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.label" : {
+    "message" : "折扣（百分比）",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.default" : {
+    "message" : "{{ fee_amount }}% 的费用",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.label" : {
+    "message" : "费用（百分比）",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.default" : {
+    "message" : "{{ fee_amount }}% 的税费",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.label" : {
+    "message" : "税费（百分比）",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.default" : {
+    "message" : "{{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.label" : {
+    "message" : "值（百分比）",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.default" : {
+    "message" : "季度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.label" : {
+    "message" : "季度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.default" : {
+    "message" : "付款到期日期：付款后 {{ billing_delay_period }} {{ billing_delay_unit }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.label" : {
+    "message" : "相对付款到期日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.default" : {
+    "message" : "付款到期日期：结账后 {{ billing_delay_period }} {{ billing_delay_unit }} ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.label" : {
+    "message" : "相对付款到期日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.default" : {
+    "message" : "付款开始日期：付款后 {{ billing_delay_period }} {{ billing_delay_unit }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.label" : {
+    "message" : "相对付款开始日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.default" : {
+    "message" : "付款开始日期：结账后 {{ billing_delay_period }} {{ billing_delay_unit }}x",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.label" : {
+    "message" : "相对付款开始日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.default" : {
+    "message" : "年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.label" : {
+    "message" : "年度",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.default" : {
+    "message" : "年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.label" : {
+    "message" : "年",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_heading.label" : {
+    "message" : "显示表格标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_other_fees.label" : {
+    "message" : "显示其他费用",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotal_title.label" : {
+    "message" : "显示小计标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotals.label" : {
+    "message" : "显示小计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_totals.label" : {
+    "message" : "显示总计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.default" : {
+    "message" : "现在到期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.inline_help_text" : {
+    "message" : "当结帐后有到期付款时，此标签会替换“总计文本”。",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.label" : {
+    "message" : "现在到期文本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_charges.label" : {
+    "message" : "今后费用",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.label" : {
+    "message" : "列",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.default" : {
+    "message" : "项目",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.label" : {
+    "message" : "行项目名称标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.default" : {
+    "message" : "付款",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.label" : {
+    "message" : "付款摘要标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.display_heading.label" : {
+    "message" : "显示表格标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.default" : {
+    "message" : "未来付款摘要",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.inline_help_text" : {
+    "message" : "向未来付款摘要表添加标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.label" : {
+    "message" : "表格标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.inline_help_text" : {
+    "message" : "只有当报价包含结帐时到期的行项目和将来到期的行项目的组合时，未来付款摘要表才可见。",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.label" : {
+    "message" : "未来付款摘要表",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "产品和服务",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "为行项目表格添加标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "表格标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.amount" : {
+    "message" : "总计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.description" : {
+    "message" : "描述",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.discount" : {
+    "message" : "单位折扣",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_cost_of_goods_sold" : {
+    "message" : "单位成本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_images" : {
+    "message" : "图片",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_recurring_billing_start_date" : {
+    "message" : "开始日期",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_sku" : {
+    "message" : "项目 SKU",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_term_in_months" : {
+    "message" : "期限",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_url" : {
+    "message" : "URL",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.item_description" : {
+    "message" : "商品和描述",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.name" : {
+    "message" : "项目名称",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.price" : {
+    "message" : "单位价格",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity" : {
+    "message" : "项目数量",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity_amount" : {
+    "message" : "数量和总计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.recurringbillingfrequency" : {
+    "message" : "结算频率",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.label" : {
+    "message" : "选择列属性",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.inline_help_text" : {
+    "message" : "为列添加标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.label" : {
+    "message" : "列标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.placeholder" : {
+    "message" : "列说明",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.label" : {
+    "message" : "行项目列",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.background_color.label" : {
+    "message" : "背景颜色",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.default" : {
+    "message" : "稍后到期的项目",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.label" : {
+    "message" : "稍后到期文本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.default" : {
+    "message" : "立即到期的项目",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.label" : {
+    "message" : "现在到期文本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.font_style.label" : {
+    "message" : "字体样式",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.label" : {
+    "message" : "行项目子标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "行项目表",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.default" : {
+    "message" : "其他费用",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.label" : {
+    "message" : "其他费用文本",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.default" : {
+    "message" : "小计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.label" : {
+    "message" : "小计标题",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.default" : {
+    "message" : "总计",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.label" : {
+    "message" : "总计文本",
+    "description" : "",
+    "placeholders" : null
+  }
+}

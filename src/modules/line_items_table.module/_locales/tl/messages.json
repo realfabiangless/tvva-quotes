@@ -1,0 +1,732 @@
+{
+  "default_text.after_discount.default" : {
+    "message" : "<span class=\"discount-notice highlighted\">matapos ang {{ discount_amount }} diskwento</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.after_discount.label" : {
+    "message" : "pagkatapos ng diskwento",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.default" : {
+    "message" : "Taunan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.label" : {
+    "message" : "Taunan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.default" : {
+    "message" : "Taunan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.label" : {
+    "message" : "Taunan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.default" : {
+    "message" : "araw",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.label" : {
+    "message" : "Araw",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.default" : {
+    "message" : "(na) araw",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.label" : {
+    "message" : "Araw",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.default" : {
+    "message" : "/ buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.label" : {
+    "message" : "/ buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.default" : {
+    "message" : "/ quarter",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.label" : {
+    "message" : "/ quarter",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.default" : {
+    "message" : "/ 6 na buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.label" : {
+    "message" : "/ 6 na buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.default" : {
+    "message" : "/ 3 taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.label" : {
+    "message" : "/ 3 taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.default" : {
+    "message" : "/ 2 taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.label" : {
+    "message" : "/ 2 taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.default" : {
+    "message" : "/ taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.label" : {
+    "message" : "/ taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.default" : {
+    "message" : "Unang pagbabayad: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.label" : {
+    "message" : "Petsa ng unang pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.default" : {
+    "message" : "para sa {{ unit.hs_term_in_months }} buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.label" : {
+    "message" : "nang ilang buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.default" : {
+    "message" : "para sa {{ year }} {{ year_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.label" : {
+    "message" : "nang ilang taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.default" : {
+    "message" : "{{ frequency_text }} subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.label" : {
+    "message" : "dalas ng subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.default" : {
+    "message" : "Mga pagbabayad sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.label" : {
+    "message" : "Mga pagbabayad sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.default" : {
+    "message" : "{{ formatted_price }} noong {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.label" : {
+    "message" : "One time date delay sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.default" : {
+    "message" : "Kailangan bayaran ang {{ formatted_price }}matapos ang {{ billing_delay_period }} {{ billing_delay_unit }} na pagbayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.label" : {
+    "message" : "Future one time relative delay",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} na magsisimula sa {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.label" : {
+    "message" : "Future recurring date delay",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} na magsisimula sa {{ formatted_first_payment_date }} para sa {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.label" : {
+    "message" : "Future recurring date delay fixed",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} na magsisimula  {{ billing_delay_period }} matapos ang{{ billing_delay_unit }} pagbayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.label" : {
+    "message" : "Future recurring relative delay",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} na magsisimula sa {{ billing_delay_period }} {{ billing_delay_unit }} matapos ang pagbabayad para sa  {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.label" : {
+    "message" : "Future recurring relative delay fixed",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Default na teksto",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.default" : {
+    "message" : "buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.label" : {
+    "message" : "Buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.default" : {
+    "message" : "Buwanan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.label" : {
+    "message" : "Buwanan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.default" : {
+    "message" : "mga buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.label" : {
+    "message" : "Mga buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.default" : {
+    "message" : "Isang beses",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.label" : {
+    "message" : "Isang beses",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.default" : {
+    "message" : "pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.label" : {
+    "message" : "Pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.default" : {
+    "message" : "Takdang petsa ng pagbabayad: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.label" : {
+    "message" : "Takdang petsa ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.default" : {
+    "message" : "Pagsisimula ng pagbabayad: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.label" : {
+    "message" : "Petsa ng pagsisimula ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.default" : {
+    "message" : "mga pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.label" : {
+    "message" : "Mga Pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.default" : {
+    "message" : "Ka anim na buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.label" : {
+    "message" : "Kada anim na buwan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.default" : {
+    "message" : "Kada tatlong taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.label" : {
+    "message" : "Kada tatlong taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.default" : {
+    "message" : "Kada dalawang taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.label" : {
+    "message" : "Kada dalawang taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.default" : {
+    "message" : "{{ fee_amount }}% diskwento",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.label" : {
+    "message" : "porsiyento ng diskwento",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.default" : {
+    "message" : "{{ fee_amount }}% fee",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.label" : {
+    "message" : "Porsyento ng fee",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.default" : {
+    "message" : "{{ fee_amount }}% buwis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.label" : {
+    "message" : "Porsyento ng buwis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.default" : {
+    "message" : "{{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.label" : {
+    "message" : "value ng porsiyento",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.default" : {
+    "message" : "Quarterly",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.label" : {
+    "message" : "Quarterly",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.default" : {
+    "message" : "Takdang petsa ng pagbabayad: {{ billing_delay_period }} {{ billing_delay_unit }} pagkatapos ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.label" : {
+    "message" : "Nauugnay na takdang petsa ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.default" : {
+    "message" : "Takdang petsa ng pagbabayad: {{ billing_delay_period }} {{ billing_delay_unit }} pagkatapos ng pag-checkout",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.label" : {
+    "message" : "Nauugnay na takdang petsa ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.default" : {
+    "message" : "Pagsisimula ng pagbabayad: {{ billing_delay_period }} {{ billing_delay_unit }} pagkatapos ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.label" : {
+    "message" : "Nauugnay na petsa ng pagsisimula ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.default" : {
+    "message" : "Pagsisimula ng pagbabayad: {{ billing_delay_period }} {{ billing_delay_unit }} pagkatapos ng pag-checkout",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.label" : {
+    "message" : "Nauugnay na petsa ng pagsisimula ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.default" : {
+    "message" : "taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.label" : {
+    "message" : "Taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.default" : {
+    "message" : "mga taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.label" : {
+    "message" : "Taon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_heading.label" : {
+    "message" : "Ipakita ang table heading",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_other_fees.label" : {
+    "message" : "Ipakita ang iba pang bayarin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotal_title.label" : {
+    "message" : "Ipakita ang title na subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotals.label" : {
+    "message" : "Ipakita ang mga subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_totals.label" : {
+    "message" : "Ipakita ang mga kabuuan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.default" : {
+    "message" : "Kailangan nang bayaran ngayon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.inline_help_text" : {
+    "message" : "Pinapalitan ng label na ito ang \"text na Kabuuan\" kapag mayroong mga pagbabayad na kailangan nang bayaran pagkatapos ng pag-check out.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.label" : {
+    "message" : "Teksto na kailangan nang bayaran ngayon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_charges.label" : {
+    "message" : "Mga singil sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.label" : {
+    "message" : "Mga column",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.default" : {
+    "message" : "Item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.label" : {
+    "message" : "Heading ng pangalan ng line item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.default" : {
+    "message" : "Pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.label" : {
+    "message" : "Heading ng buod ng pagbabayad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.display_heading.label" : {
+    "message" : "Ipakita ang table heading",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.default" : {
+    "message" : "Buod ng Mga Pagbabayad sa Hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.inline_help_text" : {
+    "message" : "Magdagdag ng heading sa mga table ng buod ng mga pagbabayad sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.label" : {
+    "message" : "Table heading",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.inline_help_text" : {
+    "message" : "Makikita lang ang talahanayan ng buod ng mga pagbabayad sa hinaharap kapag ang isang quote may halo ng mga line item na dapat bayaran sa pag-checkout, at mga line item na dapat bayaran sa hinaharap.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.label" : {
+    "message" : "Talahanayan ng buod ng mga pagbabayad sa hinaharap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "Mga Produkto at Serbisyo",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "Magdagdag ng heading sa talahanayan ng mga line item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Table heading",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.amount" : {
+    "message" : "Kabuuan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.description" : {
+    "message" : "Paglalarawan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.discount" : {
+    "message" : "Diskwento ng Yunit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_cost_of_goods_sold" : {
+    "message" : "Halaga ng Yunit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_images" : {
+    "message" : "Larawan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_recurring_billing_start_date" : {
+    "message" : "Petsa ng Pagsisimula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_sku" : {
+    "message" : "SKU ng item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_term_in_months" : {
+    "message" : "Term",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_url" : {
+    "message" : "URL",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.item_description" : {
+    "message" : "Item at Paglalarawan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.name" : {
+    "message" : "Pangalan ng item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.price" : {
+    "message" : "Presyo ng yunit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity" : {
+    "message" : "Dami ng item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity_amount" : {
+    "message" : "Bilang at Kabuuan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.recurringbillingfrequency" : {
+    "message" : "Dalas ng pagsingil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.label" : {
+    "message" : "Pumili ng property ng column",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.inline_help_text" : {
+    "message" : "Magdagdag ng pamagat sa iyong column",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.label" : {
+    "message" : "Pamagat ng column",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.placeholder" : {
+    "message" : "Paglalarawan ng column",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.label" : {
+    "message" : "Column ng line item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.background_color.label" : {
+    "message" : "Kulay ng background",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.default" : {
+    "message" : "Mga item na kailangan nang ipasa mamaya",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.label" : {
+    "message" : "Teksto na Kailangan nang ipasa mamaya",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.default" : {
+    "message" : "Mga item na kailangan nang ipasa ngayon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.label" : {
+    "message" : "Teksto na kailangan nang bayaran ngayon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.font_style.label" : {
+    "message" : "Estilo ng font",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.label" : {
+    "message" : "Mga subheading ng line item",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Line items table",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.default" : {
+    "message" : "Iba pang Bayarin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.label" : {
+    "message" : "Text ng iba pang bayarin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.default" : {
+    "message" : "Mga subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.label" : {
+    "message" : "Title ng subtotal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.default" : {
+    "message" : "Kabuuan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.label" : {
+    "message" : "Text ng kabuuan",
+    "description" : "",
+    "placeholders" : null
+  }
+}

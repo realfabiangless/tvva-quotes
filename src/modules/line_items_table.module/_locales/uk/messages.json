@@ -1,0 +1,732 @@
+{
+  "default_text.after_discount.default" : {
+    "message" : "<span class=\"discount-notice highlighted\">після {{ discount_amount }} знижки</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.after_discount.label" : {
+    "message" : "після знижки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.default" : {
+    "message" : "Щорічно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annual.label" : {
+    "message" : "Щорічно",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.default" : {
+    "message" : "Щороку",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.annually.label" : {
+    "message" : "Щороку",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.default" : {
+    "message" : "day",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.day.label" : {
+    "message" : "День",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.default" : {
+    "message" : "days",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.days.label" : {
+    "message" : "Днів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.default" : {
+    "message" : "на місяць",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_month.label" : {
+    "message" : "/ місяць",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.default" : {
+    "message" : "на квартал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_quarter.label" : {
+    "message" : "/ квартал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.default" : {
+    "message" : "на пів року",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_six_months.label" : {
+    "message" : "на пів року",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.default" : {
+    "message" : "на 3 роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_three_years.label" : {
+    "message" : "на 3 роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.default" : {
+    "message" : "на 2 роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_two_years.label" : {
+    "message" : "на 2 роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.default" : {
+    "message" : "на рік",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.every_year.label" : {
+    "message" : "/ рік",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.default" : {
+    "message" : "Перший платіж: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.first_payment_date.label" : {
+    "message" : "Дата першого платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.default" : {
+    "message" : "на {{ unit.hs_term_in_months }} місяців",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_months.label" : {
+    "message" : "на місяців",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.default" : {
+    "message" : "на {{ year }} {{ year_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.for_years.label" : {
+    "message" : "на років",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.default" : {
+    "message" : "проміжна сума {{ frequency_text }} ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.frequency_subtotal.label" : {
+    "message" : "проміжний підсумок за частотою",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.default" : {
+    "message" : "Подальші платежі",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_charges.label" : {
+    "message" : "Подальші платежі",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.default" : {
+    "message" : "{{ formatted_price }} у {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_date_delay.label" : {
+    "message" : "Майбутнє одноразове відтермінування дати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.default" : {
+    "message" : "{{ formatted_price }} належний {{ billing_delay_period }} {{ billing_delay_unit }} після платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_one_time_relative_delay.label" : {
+    "message" : "Майбутнє одноразове відносне відтермінування",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} починаючи з{{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay.label" : {
+    "message" : "Майбутнє відтермінування дати регулярного платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} починаючи з {{ formatted_first_payment_date }} для {{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_date_delay_fixed.label" : {
+    "message" : "Майбутнє фіксоване відтермінування дати регулярного платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} починаючи {{ billing_delay_period }} {{ billing_delay_unit }} після платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay.label" : {
+    "message" : "Майбутнє відносне відтермінування регулярного платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.default" : {
+    "message" : "{{ formatted_price }} {{ recurring_frequency }} починаючи з{{ billing_delay_period }} {{ billing_delay_unit }} після платежу для{{ number_of_payments }} {{ payment_pluralized }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.future_recurring_relative_delay_fixed.label" : {
+    "message" : "Майбутнє фіксоване відносне відтермінування регулярного платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Текст за замовчуванням",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.default" : {
+    "message" : "month",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.month.label" : {
+    "message" : "Місяць",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.default" : {
+    "message" : "Щомісяця",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.monthly.label" : {
+    "message" : "Щомісяця",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.default" : {
+    "message" : "month",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.months.label" : {
+    "message" : "Місяці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.default" : {
+    "message" : "Одноразово",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.one_time.label" : {
+    "message" : "Одноразово",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.default" : {
+    "message" : "платіж",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment.label" : {
+    "message" : "Платіж",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.default" : {
+    "message" : "Належний платіж: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_due_date.label" : {
+    "message" : "Термін внесення платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.default" : {
+    "message" : "Виплата починається: {{ formatted_first_payment_date }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payment_start_date.label" : {
+    "message" : "Дата початку виплати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.default" : {
+    "message" : "платежі",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.payments.label" : {
+    "message" : "Платежі",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.default" : {
+    "message" : "За пів року",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_six_months.label" : {
+    "message" : "За пів року",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.default" : {
+    "message" : "За три роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_three_years.label" : {
+    "message" : "За три роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.default" : {
+    "message" : "За два роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.per_two_years.label" : {
+    "message" : "За два роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.default" : {
+    "message" : "{{ fee_amount }}% знижки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_discount.label" : {
+    "message" : "відсоток знижки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.default" : {
+    "message" : "{{ fee_amount }}% збору",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_fee.label" : {
+    "message" : "Вітсоток збору",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.default" : {
+    "message" : "{{ fee_amount }}% податку",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_tax.label" : {
+    "message" : "Відосоток податку",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.default" : {
+    "message" : "{{ fee_amount }}%",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.percent_value.label" : {
+    "message" : "значення у відсотках",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.default" : {
+    "message" : "Щокварталу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.quarterly.label" : {
+    "message" : "Щокварталу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.default" : {
+    "message" : "Належний платіж: {{ billing_delay_period }} {{ billing_delay_unit }} після виплати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date.label" : {
+    "message" : "Відносний термін внесення платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.default" : {
+    "message" : "Належний платіж: {{ billing_delay_period }} {{ billing_delay_unit }} після перевірки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_due_date_after_checkout.label" : {
+    "message" : "Відносний термін внесення платежу",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.default" : {
+    "message" : "Початок платежу: {{ billing_delay_period }} {{ billing_delay_unit }} після виплати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date.label" : {
+    "message" : "Відносна дата початку виплати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.default" : {
+    "message" : "Початок платежу: {{ billing_delay_period }} {{ billing_delay_unit }} після перевірки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.relative_payment_start_date_after_checkout.label" : {
+    "message" : "Відносна дата початку виплати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.default" : {
+    "message" : "рік",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.year.label" : {
+    "message" : "Рік",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.default" : {
+    "message" : "років",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.years.label" : {
+    "message" : "Роки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_heading.label" : {
+    "message" : "Відобразити заголовок таблиці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_other_fees.label" : {
+    "message" : "Відображення інших зборів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotal_title.label" : {
+    "message" : "Відобразити заголовок проміжних підсумків",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_subtotals.label" : {
+    "message" : "Відображення проміжних підсумків",
+    "description" : "",
+    "placeholders" : null
+  },
+  "display_totals.label" : {
+    "message" : "Відображення підсумків",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.default" : {
+    "message" : "Підлягає оплаті зараз",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.inline_help_text" : {
+    "message" : "Цей ярлик замінює \"Текст загальної суми\", якщо є обов’язкові платежі після оформлення замовлення.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "due_now_title.label" : {
+    "message" : "Текст поля \"Підлягає оплаті зараз\"",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_charges.label" : {
+    "message" : "Подальші витрати",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.label" : {
+    "message" : "Стовпці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.default" : {
+    "message" : "Позиція",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.line_item_name_heading.label" : {
+    "message" : "Заголовок назви цінової пропозиції",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.default" : {
+    "message" : "Платіж",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.columns.payment_summary_heading.label" : {
+    "message" : "Заголовок зведення платежів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.display_heading.label" : {
+    "message" : "Відобразити заголовок таблиці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.default" : {
+    "message" : "Зведення подальших платежів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.inline_help_text" : {
+    "message" : "Додати заголовок до таблиці зведення подальших платежів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.heading.label" : {
+    "message" : "Заголовок таблиці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.inline_help_text" : {
+    "message" : "Зведена таблиця майбутніх платежів відображається лише тоді, коли цінова пропозиція містить поєднання позицій, що підлягають оплаті під час оформлення замовлення, і позицій, які підлягають оплаті в майбутньому.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "future_payments_summary_table.label" : {
+    "message" : "Таблиця зведення подальших платежів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "Продукти й послуги",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "Додати заголовок до таблиці позицій",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Заголовок таблиці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.amount" : {
+    "message" : "Загалом",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.description" : {
+    "message" : "Опис",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.discount" : {
+    "message" : "Знижка на одиницю",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_cost_of_goods_sold" : {
+    "message" : "Вартість одиниці",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_images" : {
+    "message" : "Зображення",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_recurring_billing_start_date" : {
+    "message" : "Дата початку",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_sku" : {
+    "message" : " SKU позиції",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_term_in_months" : {
+    "message" : "Строк",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.hs_url" : {
+    "message" : "URL-адреса",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.item_description" : {
+    "message" : "Товар і опис",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.name" : {
+    "message" : "Назва позиції",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.price" : {
+    "message" : "Ціна за одиницю",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity" : {
+    "message" : "Кількість позицій",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.quantity_amount" : {
+    "message" : "Кількість і загальний підсумок",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.choices.recurringbillingfrequency" : {
+    "message" : "Періодичність виставлення рахунків",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_property.label" : {
+    "message" : "Вибрати властивість колонки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.inline_help_text" : {
+    "message" : "Додати назву до вашої колонки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.label" : {
+    "message" : "Назва колонки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.column_title.placeholder" : {
+    "message" : "Опис колонки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_column.label" : {
+    "message" : "Колонка позиції",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.background_color.label" : {
+    "message" : "Колір фону",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.default" : {
+    "message" : "Позиції до оплати пізніше",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_later_text.label" : {
+    "message" : "Текст поля «Підлягає оплаті пізніше»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.default" : {
+    "message" : "Позиції до оплати зараз",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.due_now_text.label" : {
+    "message" : "Текст поля «Підлягає оплаті зараз»",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.font_style.label" : {
+    "message" : "Стиль шрифту",
+    "description" : "",
+    "placeholders" : null
+  },
+  "line_item_subheadings.label" : {
+    "message" : "Підзаголовки позицій",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Line items table",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.default" : {
+    "message" : "Інші збори",
+    "description" : "",
+    "placeholders" : null
+  },
+  "other_fees_title.label" : {
+    "message" : "Текст інших зборів",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.default" : {
+    "message" : "Проміжні суми",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subtotal_title.label" : {
+    "message" : "Назва для проміжної суми",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.default" : {
+    "message" : "Загалом",
+    "description" : "",
+    "placeholders" : null
+  },
+  "total_title.label" : {
+    "message" : "Текст для загальної суми",
+    "description" : "",
+    "placeholders" : null
+  }
+}

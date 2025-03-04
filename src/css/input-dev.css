@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+@page {
+  size: A4;
+  margin: 4mm 5mm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p,
+div {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+
+  h2 {
+    font-size: 1.1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+  h3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+button > a {
+  text-decoration: none;
+  color: white;
+}
+
+.t-quotes {
+  width: 100%;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+.t-quotes-wrapper {
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .t-quotes-wrapper {
+    gap: 35px;
+    padding: 15px 10px;
+  }
+}
+
+.t-info {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.t-sender {
+  text-align: right;
+}
+
+.t-recipient {
+  display: flex;
+  gap: 12px;
+}
+
+.t-recipient-image {
+  position: relative;
+  bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .t-recipient {
+    flex-direction: column;
+  }
+  .t-sender {
+    font-size: 12px;
+  }
+}
+
+.t-recipient-text {
+  font-size: 16px;
+}
+
+.t-footer_info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.t-footer_info-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen {
+  .t-footer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .t-footer_info-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.linebreak {
+  page-break-before: always;
+}
+
+@media print {
+  .t-quotes-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .t-footer_info {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}

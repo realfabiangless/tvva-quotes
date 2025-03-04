@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "content_types" : [ "QUOTE_TEMPLATE" ],
+  "host_template_types" : [ "QUOTE" ],
+  "module_id" : 73241450707,
+  "is_available_for_new_content" : true
+}

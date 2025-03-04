@@ -1,0 +1,22 @@
+{
+  "include_hubspot_avatar.label" : {
+    "message" : "Incluir avatar de HubSpot del remitente",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Sender user",
+    "description" : "",
+    "placeholders" : null
+  },
+  "sender_information.default" : {
+    "message" : "<span>{{ ptoken_sender_full_name }} - {{ personalization_token('template_data.quote.hs_sender_jobtitle', '') }} {{ personalization_token('template_data.quote.hs_sender_company_name', '') }}</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "sender_information.label" : {
+    "message" : "Información del remitente",
+    "description" : "",
+    "placeholders" : null
+  }
+}

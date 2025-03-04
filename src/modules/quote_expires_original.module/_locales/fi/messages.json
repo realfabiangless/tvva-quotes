@@ -1,0 +1,17 @@
+{
+  "name" : {
+    "message" : "Quote expires",
+    "description" : "",
+    "placeholders" : null
+  },
+  "quote_expires_text.default" : {
+    "message" : "Tämä tarjous erääntyy",
+    "description" : "",
+    "placeholders" : null
+  },
+  "quote_expires_text.label" : {
+    "message" : "Tarjouksen vanhenemisen teksti",
+    "description" : "",
+    "placeholders" : null
+  }
+}

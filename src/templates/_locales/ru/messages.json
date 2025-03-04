@@ -1,0 +1,177 @@
+{
+  "amount": {
+    "message": "Сумма",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Комментарии",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Комментарии от",
+    "description": "",
+    "placeholders": null
+  },
+  "expired_title": {
+    "message": "Истек срок действия этого ценового предложения",
+    "description": "",
+    "placeholders": null
+  },
+  "expired_subtitle": {
+    "message": "Обратитесь к своему торговому представителю для получения дополнительной информации.",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Товар и описание",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Другие сборы",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Кем подготовлено:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Цена",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Продукты и услуги",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Условия покупки",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Количество",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Кем создано ценовое предложение:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Промежуточные суммы",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Итоговая сумма",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Цена единицы товара",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Счет-фактура",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Номер счета-фактуры",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Дата выставления счета",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Все сборы указаны в {{ currency_code }} и облагаются налогом с продаж (если применимо).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "Номер заказа на поставку",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Таблица позиций счета-фактуры",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "после применения скидки {{ discount_amount }} ",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Кол-во",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Адресат выставления счета:",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Срок оплаты",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "скидка",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "скидка {{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "Скидка {{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "{{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Промежуточная сумма",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Будущие платежи",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Платежи, подлежащие оплате позже.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Обзор",
+    "description": "",
+    "placeholders": null
+  }
+}

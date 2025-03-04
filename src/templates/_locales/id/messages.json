@@ -1,0 +1,167 @@
+{
+  "amount": {
+    "message": "Jumlah",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Komentar",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Komentar dari",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Item & Deskripsi",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Biaya Lainnya",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Disiapkan oleh:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Harga",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Produk & Layanan",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Ketentuan pembelian",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Jumlah",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Penawaran dibuat oleh:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Subtotal",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Total",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Harga Satuan",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Faktur",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Nomor faktur",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Tanggal faktur",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Semua biaya yang tercantum di {{ currency_code }} dan dikenakan pajak penjualan (seperti yang berlaku).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "Nomor PO",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Tabel item baris faktur",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "setelah diskon {{ discount_amount }}",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Jml",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Tagihkan ke",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Jatuh tempo",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "diskon",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "{{ fee_amount }}% potongan harga",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "Potongan {{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "{{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Subtotal",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Pembayaran Akan Datang",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Pembayaran yang jatuh tempo nanti.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Ringkasan",
+    "description": "",
+    "placeholders": null
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "amount": {
+    "message": "Ποσό",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Σχόλια",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Σχόλια από",
+    "description": "",
+    "placeholders": null
+  },
+  "expired_title": {
+    "message": "Αυτή η προσφορά έχει λήξει",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Είδος και περιγραφή",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Άλλες χρεώσεις",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Προετοιμάστηκε από:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Τιμή",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Προϊόντα και υπηρεσίες",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Όροι αγοράς",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Ποσότητα",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Η προσφορά δημιουργήθηκε από:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Υποσύνολο",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Σύνολο",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Τιμή μονάδας",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Τιμολόγιο",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Αριθμός τιμολογίου",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Ημερομηνία τιμολογίου",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Όλες οι χρεώσεις παρατίθενται σε {{ currency_code }} και υπόκεινται σε φόρο επί των πωλήσεων (κατά περίπτωση).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "Αριθμός εντολής αγοράς",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Πίνακας στοιχείων γραμμής τιμολογίου",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "μετά από έκπτωση {{ discount_amount }}",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Ποσότητα",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Χρέωση σε",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Προθεσμία",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "έκπτωση",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "{{ fee_amount }}% έκπτωση",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "{{ fee_amount }}% έκπτωση",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "{{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Υποσύνολο",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Μελλοντικές πληρωμές",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Πληρωμές που πρέπει να καταβληθούν αργότερα.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Σύνοψη",
+    "description": "",
+    "placeholders": null
+  }
+}

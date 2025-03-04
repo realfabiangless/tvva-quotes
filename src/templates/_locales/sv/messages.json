@@ -1,0 +1,167 @@
+{
+  "amount": {
+    "message": "Summa",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Kommentarer",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Kommentarer från",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Föremål och beskrivning",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Andra avgifter",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Förberedd av:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Pris",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Produkter och tjänster",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Köpvillkor",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Antal",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Offert skapat av:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Subtotal",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Totalt",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Enhetspris",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Faktura",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Fakturanummer",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Faktureringsdatum",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Alla avgifter är listade i {{ currency_code }}och är föremål för säljskatt (i förekommande fall).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "PO-nummer",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Radföremålstabell för fakturor",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "efter {{ discount_amount }} rabatt",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Antal",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Fakturera till",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Utgångsdatum",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "rabatt",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "{{ fee_amount }}% rabatt",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "{{ fee_amount }} % av",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "{{ fee_amount }}%",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Delsumma",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Framtida betalningar",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Betalningar som förfaller senare.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Sammanfattning",
+    "description": "",
+    "placeholders": null
+  }
+}

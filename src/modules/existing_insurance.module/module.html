@@ -1,0 +1,35 @@
+{% from '../../imports/mock_data.html' import SAMPLE_TEMPLATE_DATA as mock_data %}
+
+{% set template_data = template_data || mock_data %}
+{% set module_data = template_data.module_data %}
+{% set QUOTE = template_data.quote || mock_data.quote %}
+{% set ASSOCIATED_OBJECTS = QUOTE.associated_objects %}
+{% set LINE_ITEMS = ASSOCIATED_OBJECTS.line_items_by_start_date ? ASSOCIATED_OBJECTS.line_items_by_start_date.PRESENT : ASSOCIATED_OBJECTS.line_items %}
+{% set DEAL = ASSOCIATED_OBJECTS.deal %}
+{% set customobject = DEAL.associated_objects.custom_objects["_2_114893978"] || RECIPIENT_CONTACTS[0].associated_objects.custom_objects["_2_114893978"] %}
+
+{% macro checkCondition(referanceProperty, conditions, text) %}
+ 	
+  {% set values = customobject[0][referanceProperty] %}
+  {% set trimedValues = values|split(';')|map("trim") %}
+  {% set isMatch = false %}
+
+  {% for value in trimedValues %}
+    {% if value in conditions and not isMatch %}
+      {% set isMatch = true %}
+      <div class="t-existing_insurance-block" style="background-color: {{ module.background_color.color }}; border: {{ module.border_width }}px solid {{ module.border_color.color }}">   
+        {{ text }}
+       </div>
+    {% endif %}
+  {% endfor %}
+
+{% endmacro %}
+
+<div class="t-existing_insurance">
+  <h3>{{ module.title }}</h3>
+  {% for property in module.properties %}
+  <div class="t-existing_insurance-item" >                                                                                 
+    {{ checkCondition(property.crm_property.property, property.conditions, property.text) }}
+  </div>  
+  {% endfor %}
+</div>

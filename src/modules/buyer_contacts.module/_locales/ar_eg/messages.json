@@ -1,0 +1,22 @@
+{
+  "name" : {
+    "message" : "جهات اتصال المشتري",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_email.label" : {
+    "message" : "البريد الإلكتروني لجهة اتصال المشتري",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_name.label" : {
+    "message" : "اسم جهة اتصال المشتري",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_phone.label" : {
+    "message" : "هاتف جهة اتصال المشتري",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,406 @@
+{% from '../../imports/mock_data.html' import SAMPLE_TEMPLATE_DATA as mock_data %}
+
+{% set template_data = template_data || mock_data %}
+{% set module_data = template_data.module_data %}
+{% set QUOTE = template_data.quote || mock_data.quote %}
+{% set LOCALE = QUOTE.hs_locale || 'en-US' %}
+{% set TIMEZONE = QUOTE.hs_timezone || 'US/Eastern' %}
+{% set ASSOCIATED_OBJECTS = QUOTE.associated_objects %}
+{% set LINE_ITEMS = ASSOCIATED_OBJECTS.line_items_by_start_date ? ASSOCIATED_OBJECTS.line_items_by_start_date.PRESENT : ASSOCIATED_OBJECTS.line_items %}
+{% set DEAL = ASSOCIATED_OBJECTS.deal %}
+{% set RECIPIENT_CONTACTS = ASSOCIATED_OBJECTS.contacts %}
+
+{% set customobject = DEAL.associated_objects.custom_objects["_2_114893978"] || RECIPIENT_CONTACTS[0].associated_objects.custom_objects["_2_114893978"] %}
+
+{% set remap_dict = {} %}
+{% for property in module.table.property_remap %}
+  {% set property_key = property.property.property %}
+  {% set value_map = {} %}
+
+  {% for newProperty in property.properties %}
+    {% do value_map.put(newProperty.old_value, newProperty.new_value) %}
+  {% endfor %}
+
+  {% do remap_dict.put(property_key, value_map) %}
+{% endfor %}
+
+{% set properties_data = {} %}
+  {% for i in module.table.properties %}
+  {% set property_name = i.display %}
+  {% set property_value = i.value|lower %}
+  {% set property_info = { "name": property_name, "value": property_value } %}
+
+  {% do properties_data.put(property_value, property_info) %}
+{% endfor %}
+
+{% for item in LINE_ITEMS %}
+  {% if item.intention_innerhalb_angebot == "Empfehlung" %}
+    {% do item.put("sort", 1) %}
+  {% elif item.intention_innerhalb_angebot == "Alternative 1" %}
+    {% do item.put("sort", 2) %}
+  {% elif item.intention_innerhalb_angebot == "Alternative 2" %}
+    {% do item.put("sort", 3) %}
+  {% else %}
+    {% do item.put("sort", 4) %}
+  {% endif %}
+{% endfor %}
+
+{% set overall = {val : 0} %}
+
+{% macro filter_properties(items) %}
+  {% set options_map = {} %}
+  <div class="property-wrapper">
+    <div class="property-wrapper-properties">
+      {% for property in module.properties %}
+      {# Initialize a temporary variable for the property's options #}
+      {% set temp_options = [] %}
+
+      {# Collect all values of this property from items #}
+      {% for item in items %}
+        {% if property.value in item %}
+          {% set _ = temp_options.append(item[property.value]) %}
+        {% endif %}
+      {% endfor %}
+
+      {# Update the options_map with the temporary list for this property #}
+      {% do options_map.put(property.value, temp_options) %}
+      <span style="position:relative">
+        <select class="property-dropdown" name="{{ property.value }}">
+          {% for option in property.choices %}
+            {% if option.value in options_map[property.value] %}
+              <option {% if DEAL[option.default.property_value] %}
+                      {% if DEAL[option.default.property_value] == option.default.choice_value %}
+                      selected
+                      {% endif %} 
+                      {% else %}
+                      {% if loop.first %}selected{% endif %}
+                      {% endif %}
+                      value="{{ option.value }}"
+                      >
+                {{ option.Label }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </span>
+      {% endfor %}
+    </div>
+    <div class="property-helper">
+      <img src="{{ get_asset_url('../../images/arrow.svg') }}" alt="Accent arrow" class="property-helper-arrow" height="50"/>
+      <p class="property-helper-text">{{ module.helper_text }}</p>
+    </div>
+  </div>
+
+{% endmacro %}
+
+
+
+{% macro remap_value(property, value) %}
+  {{ value in remap_dict[property] ? remap_dict[property][value]|render : value }}
+{% endmacro %}
+
+
+
+<div class="t-table-wrapper">
+  <h2>
+    Unsere Empfehlung für <b>{{QUOTE.hs_title|cut("Angebotsvorschlag für") }}: </b>eine
+    {{ filter_properties(LINE_ITEMS) }}
+  </h2>
+  <p class="error-text" id="errorText">{{ module.error_text }}</p>
+  <div class="t-table">
+    <div class="t-column static">
+      <div class="t-cell t-select_item">
+        {#Empty cell for name row#}
+      </div>
+      {% for i in properties_data %}
+      <div class="t-cell static">
+        <p>{{ i.name }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="t-table-scroll">
+      {% for item in LINE_ITEMS|sort(false, false, "sort") %}
+        {% if item["art_der_absicherung"] != "Haftpflichtversicherung" %}
+          <div class="t-column t-filter-product {% if item["intention_innerhalb_angebot"] == "Empfehlung" %}positive{% elif item["intention_innerhalb_angebot"] == "Negativ Beispiel" %}negative{% endif %}"
+              {% for property in module.properties %}data-{{property.value}}="{{ item[property.value] }}"{% endfor %}
+              data-product-recommendation="{{ item["intention_innerhalb_angebot"] }}"
+              >
+            <div class="t-cell t-select_item t-text-center">
+              <h4>{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"]) }}</h4>
+            </div>
+            {% for property in properties_data %}
+            {% set numTest = item[property.value]|int %} {# If this is all in one line it doesn't work #}
+            <div class="t-cell dynamic">
+              {% if item[property.value] == "true" or item[property.value] == "ja" %}
+              <img class="t-cell-image" src="{{ module.table.image_true.src }}" width="15px" height="15px" alt="{{ module.table.image_true.alt }}">
+              {% elif item[property.value] == "false" or item[property.value] == "nein" %}
+                <img class="t-cell-image" src="{{ module.table.image_false.src }}" width="15px" height="15px" alt="{{ module.table.image_false.alt }}">
+              {% elif numTest is integer and numTest != 0 %}
+                <p>{{ item[property.value]|format_currency("de-DE", "EUR") }}</p>
+              {% else %}
+                <p>{{ item[property.value]|truncate(35)}}</p>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% do overall.update({val: overall.val + 1 }) %}
+        {% endif %}
+      {% endfor %}
+      <button class="t-table-next_button" id="nextButton">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6L15 12L9 18" stroke="#008e6f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {% if module.enable_select %}
+    <div class="t-step">
+      {{ module.step.step_1 }}
+    </div>
+  {% endif %}
+
+
+  <div class="t-select">
+    <h2>{{ module.select.title }}</h2>
+    {% for item in LINE_ITEMS|sort(false, false, "sort") %}
+      {% if item["art_der_absicherung"] != "Haftpflichtversicherung" %}
+        <div class="t-select-product t-filter-product" id="product" 
+            data-product-id="{{item["hs_object_id"]}}" 
+            data-product-recommendation="{{ item["intention_innerhalb_angebot"] }}"
+            data-product-recommendation-remap="{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"])|render|trim }}"
+            {% for property in module.properties %}data-{{property.value}}="{{ item[property.value] }}"{% endfor %}   
+            >
+          <div class="t-select_item">
+            <h3 id="productRecommendation">{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"]) }}</h3>
+            {% if item["intention_innerhalb_angebot"] != "Negativ Beispiel" %}
+              {% if module.enable_select %}
+                <button id="select" class="t-button t-button-outline">
+                  <p>{{ module.select.button_text }}</p>
+                </button>
+              {% else %}
+                <a id="select" class="t-button t-button-outline" href="https://hook.eu1.make.com/js6i0arlv3firw7lo24jv5511bd5cf75?line-item_id={{ item["hs_object_id"] }}">
+                  {{ module.select.button_text }}
+                </a>
+              {% endif %}
+            {% endif %}
+          </div>
+          {% if item[module.select.internal_name] %}
+            <p class="t-select_description">{{ item[module.select.internal_name] }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+  {% if module.enable_select %}
+
+  <div class="t-step">
+    {{ module.step.step_2 }}
+  </div>
+
+  <div class="t-chosen_product">
+    <div class="t-your_choice">
+      <div class="t-your_choice-text">{{ module.product.text }}</div>
+      <div id="activeProduct" data-product-id="" class="t-select_item">
+        <h3 id="activeProductRecommendation"></h3>
+      </div>
+    </div>    
+    <button id="submit" class="t-button t-button-fill">
+      <a target="_blank" rel="noopener noreferrer">{{ module.product.button_text }}</a>
+    </button>
+    <p>
+      {{ module.product.submit_information }}
+    </p>
+  </div>
+
+  {% endif %}
+</div>
+
+
+{% require_css %}
+<style>
+  .t-column.negative {
+    background: {{ module.styles.negative.background_color.color }};
+    color: {{ module.styles.negative.text_color.color }};
+  }
+
+  .t-column.positive {
+    background: {{ module.styles.positive.background_color.color }};
+    color: {{ module.styles.positive.text_color.color }};
+  }
+
+  .t-table {
+    grid-template-columns: 1fr 3fr; /* Dynamicly renders columns based on the amount of Line items. This has to be at the bottom of the code!*/
+  }
+  .t-table-scroll {
+    display: grid;
+    grid-template-columns: repeat({{overall.val}}, calc(33.3%));
+  }
+  @media screen and (max-width: 760px) {
+    .t-table {
+      grid-template-columns: 1fr 2fr;
+    }
+    .t-table-scroll {
+      grid-template-columns: repeat({{overall.val}}, calc(33.3%));
+      /*Code to make columns snap into place on mobile*/
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .t-table-scroll {
+      grid-template-columns: repeat({{overall.val}}, calc(50%));
+      /*Code to make columns snap into place on mobile*/
+    }
+  }
+</style>
+{% end_require_css %}
+
+
+{% require_js %}
+<script>
+  document.addEventListener('DOMContentLoaded', async function() {
+    const selectedOptions = {}; // Object to store selected options
+    const products = document.querySelectorAll('.t-select-product');
+    const filterProducts = document.querySelectorAll('.t-filter-product')
+    const scrollContainer = document.querySelector('.t-table-scroll');
+    const nextButton = document.querySelector('.t-table-next_button');
+    let activeProductId, activeProductRecommendation;
+
+    // Initialize selected options based on checked radio buttons
+    document.querySelectorAll('.property-dropdown').forEach(function(select) {
+      selectedOptions[select.name] = select.value;
+    });
+
+    // Apply initial filter and update active product
+    filterLineItems();
+    updateActiveProduct();
+
+    // Attach event listeners to all radio buttons
+    document.querySelectorAll('.property-dropdown').forEach(function(radio) {
+      radio.addEventListener('change', handleSelectChange);
+    });
+
+    // Handle radio button change
+    function handleSelectChange(event) {
+      selectedOptions[event.target.name] = event.target.value;
+      filterLineItems();
+      updateActiveProduct();
+    }
+
+    // Filter line items based on selected options
+    function filterLineItems() {
+      filterProducts.forEach(function(item) {
+        let matchesAllCriteria = true;
+        for (const property in selectedOptions) {
+          if (item.dataset[property] !== selectedOptions[property]) {
+            matchesAllCriteria = false;
+            break;
+          }
+        }
+        item.style.display = matchesAllCriteria ? '' : 'none';
+      });
+    } 
+
+    function findProductByRecommendations(recommendations) {
+      for (let recommendation of recommendations) {
+        let product = document.querySelector(`.t-select-product[data-product-recommendation="${recommendation}"]:not([style*="display: none"])`);
+        if (product) {
+          return product;
+        }
+      }
+      return null;
+    }
+
+    function updateActiveProduct(product) {
+      {% if module.enable_select %}
+
+      // Remove the active class from all buttons
+      document.querySelectorAll('.t-button-outline.active').forEach(function(button) {
+        button.classList.remove('active');
+      });
+
+
+      // If no product is passed, try to select the 'Empfehlung' product that is not hidden
+      if (!product) {
+        const recommendations = ["Empfehlung", "Alternative 1", "Alternative 2"];
+        product = findProductByRecommendations(recommendations);
+      }
+
+
+      if (product) {
+        document.querySelector('#errorText').style.display = 'none';
+        document.querySelector('.t-table').style.display = 'grid';
+
+        var activeButton = product.querySelector('.t-button-outline');
+        if (activeButton) {
+          activeButton.classList.add('active');
+        }
+
+        // Update the active product details
+        var productId = product.dataset.productId;
+        var productRecommendation = product.getAttribute('data-product-recommendation');
+
+        if (product.getAttribute('data-product-recommendation-remap')) {
+          productRecommendation = product.getAttribute('data-product-recommendation-remap');
+        }
+        updateProduct(productRecommendation, productId);
+        return
+      } else {
+        // Handle the case where all products are hidden
+        handleNoVisibleProducts();
+        return
+      }
+      {% else %}
+      return
+      {% endif %}
+    }
+
+    // Update product details
+    function updateProduct(newProductRecommendation, newProductId) {
+      const submitAnchor = submitButton.querySelector('#submit a');
+      const product = document.querySelector('#activeProduct');
+      const recommendation = product.querySelector('#activeProductRecommendation');
+
+      recommendation.textContent = newProductRecommendation;
+      product.setAttribute('data-product-id', newProductId);
+      activeProductId = newProductId;
+      activeProductRecommendation = newProductRecommendation;
+      submitAnchor.href = `https://hook.eu1.make.com/js6i0arlv3firw7lo24jv5511bd5cf75?line-item_id=${activeProductId}`;
+    }
+
+    // Event listener for the next button in the scroll container
+    nextButton.addEventListener('click', function() {
+      const snapWidth = scrollContainer.scrollWidth / scrollContainer.childElementCount;
+      const currentScroll = scrollContainer.scrollLeft;
+      const nextScroll = currentScroll === 0 ? snapWidth : Math.ceil(currentScroll / snapWidth) * snapWidth;
+      scrollContainer.scrollTo({ left: nextScroll, behavior: 'smooth' });
+    });
+
+    {% if module.enable_select %}
+    // Event listeners for selecting products
+    products.forEach(function(product) {
+      const selectButton = product.querySelector('#select');
+      if (selectButton) {
+        selectButton.addEventListener('click', function() {
+          updateActiveProduct(product);
+        });
+      }
+    });
+    {% endif %}
+
+  });
+
+
+  function handleNoVisibleProducts() {
+    document.querySelector('#errorText').style.display = 'block';
+    document.querySelector('.t-table').style.display = 'none';
+  }
+
+</script>
+{% end_require_js %}
+
+
+
+

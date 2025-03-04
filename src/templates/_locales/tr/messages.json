@@ -1,0 +1,167 @@
+{
+  "amount": {
+    "message": "Tutar",
+    "description": "",
+    "placeholders": null
+  },
+  "comments": {
+    "message": "Yorumlar",
+    "description": "",
+    "placeholders": null
+  },
+  "comments_from": {
+    "message": "Yorumları yapan",
+    "description": "",
+    "placeholders": null
+  },
+  "item_and_description": {
+    "message": "Ürün ve Açıklaması",
+    "description": "",
+    "placeholders": null
+  },
+  "other_fees": {
+    "message": "Diğer Ücretler",
+    "description": "",
+    "placeholders": null
+  },
+  "prepared_by": {
+    "message": "Hazırlayan:",
+    "description": "",
+    "placeholders": null
+  },
+  "price": {
+    "message": "Fiyat",
+    "description": "",
+    "placeholders": null
+  },
+  "products_and_services": {
+    "message": "Ürün ve Hizmetler",
+    "description": "",
+    "placeholders": null
+  },
+  "purchase_terms": {
+    "message": "Satın Alma koşulları",
+    "description": "",
+    "placeholders": null
+  },
+  "quantity": {
+    "message": "Miktar",
+    "description": "",
+    "placeholders": null
+  },
+  "quote_created_by": {
+    "message": "Teklifi oluşturan:",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotals": {
+    "message": "Ara toplamlar",
+    "description": "",
+    "placeholders": null
+  },
+  "total": {
+    "message": "Toplam",
+    "description": "",
+    "placeholders": null
+  },
+  "unit_price": {
+    "message": "Birim fiyat",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice": {
+    "message": "Fatura",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_number": {
+    "message": "Fatura numarası",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_date": {
+    "message": "Fatura tarihi",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_legal_disclaimer": {
+    "message": "Tüm ücretler {{ currency_code }} olarak listelenmiştir ve satış vergisine tabidir (geçerli olduğu gibi).",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_purchase_order_number": {
+    "message": "PO numarası",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_label": {
+    "message": "Fatura satır öğeleri tablosu",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_after_discount": {
+    "message": "{{ discount_amount }} indirimden sonra",
+    "description": "",
+    "placeholders": null
+  },
+  "invoice_line_item_quantity": {
+    "message": "Adet",
+    "description": "",
+    "placeholders": null
+  },
+  "bill_to": {
+    "message": "Faturalandırın:",
+    "description": "",
+    "placeholders": null
+  },
+  "due_date": {
+    "message": "Vade tarihi",
+    "description": "",
+    "placeholders": null
+  },
+  "discount": {
+    "message": "indirim",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount": {
+    "message": "%{{ fee_amount }} indirim",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_discount_off": {
+    "message": "%{{ fee_amount }} indirim",
+    "description": "",
+    "placeholders": null
+  },
+  "percent_value": {
+    "message": "%{{ fee_amount }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal": {
+    "message": "Ara toplam",
+    "description": "",
+    "placeholders": null
+  },
+  "future_charges": {
+    "message": "Gelecek Ödemeler",
+    "description": "",
+    "placeholders": null
+  },
+  "future_payments_subheading": {
+    "message": "Vadesi daha sonra olan ödemeler.",
+    "description": "",
+    "placeholders": null
+  },
+  "sender_contact_name": {
+    "message": "{{ personalization_token('template_data.quote.hs_sender_firstname', '') ~ ' ' ~ personalization_token('template_data.quote.hs_sender_lastname', '') }}",
+    "description": "",
+    "placeholders": null
+  },
+  "subtotal_table_title": {
+    "message": "Özet",
+    "description": "",
+    "placeholders": null
+  }
+}

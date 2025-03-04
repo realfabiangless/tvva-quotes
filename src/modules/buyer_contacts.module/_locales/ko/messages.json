@@ -1,0 +1,22 @@
+{
+  "name" : {
+    "message" : "구매 담당자 연락처",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_email.label" : {
+    "message" : "구매 담당자 이메일",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_name.label" : {
+    "message" : "구매 담당자 이름",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_phone.label" : {
+    "message" : "구매 담당자 휴대폰",
+    "description" : "",
+    "placeholders" : null
+  }
+}

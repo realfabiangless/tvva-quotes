@@ -1,0 +1,111 @@
+[ {
+  "id" : "c0976871-dc50-d3ad-91e3-88a00a4f49ac",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "c3a5a1d1-2474-15d6-f6bd-35d50dfe2b36",
+  "name" : "properties",
+  "label" : "Properties",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "d2fe20a6-82d4-0290-a5bd-013b182ff6b0",
+    "name" : "crm_property",
+    "label" : "CRM Property",
+    "required" : false,
+    "locked" : false,
+    "object_type" : "p_tiere",
+    "type" : "crmobjectproperty",
+    "display_width" : null,
+    "default" : {
+      "property" : "vorherige_versicherung_art"
+    }
+  }, {
+    "id" : "e055236f-43c3-b7bb-f361-895f52802913",
+    "name" : "conditions",
+    "label" : "Conditions",
+    "help_text" : "Write the Property Labels of the properties to check.\n\nIf Custom Object property is found it will display the text.",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "571c1e40-38a1-d3f2-996d-dd1abff0dd08",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Lorem ispum dolor sit amet."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "crm_property" : {
+      "property" : "vorherige_versicherung_art"
+    },
+    "text" : "Lorem ispum dolor sit amet."
+  } ]
+}, {
+  "id" : "21ab005e-5459-41e8-29cf-d5dec89fccb2",
+  "name" : "background_color",
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "display_width" : null,
+  "default" : {
+    "color" : "#FFFFFF",
+    "opacity" : 100
+  }
+}, {
+  "id" : "cd05e43f-836e-23d7-a50d-4da54504dfb5",
+  "name" : "border_color",
+  "label" : "Border Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "display_width" : null,
+  "default" : {
+    "color" : null,
+    "opacity" : null
+  }
+}, {
+  "id" : "5a548d3f-0503-fd50-59f7-7c33b53127ab",
+  "name" : "border_width",
+  "label" : "Border Width",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "suffix" : "px",
+  "type" : "number",
+  "display_width" : null,
+  "default" : 2
+} ]

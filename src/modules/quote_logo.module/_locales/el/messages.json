@@ -1,0 +1,32 @@
+{
+  "company_logo_image.label" : {
+    "message" : "Εικόνα λογότυπου εταιρείας",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_logo_max_height.help_text" : {
+    "message" : "Αυτό δεν ισχύει όταν παρακάμπτεται το προεπιλεγμένο λογότυπο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_logo_max_height.label" : {
+    "message" : "Μέγιστο ύψος λογότυπου",
+    "description" : "",
+    "placeholders" : null
+  },
+  "inline_help_text" : {
+    "message" : "Από προεπιλογή, οι προσφορές σας θα εμφανίζουν το λογότυπο της εταιρείας από τις προεπιλογές λογαριασμού ή τις σελίδες ιστότοπου, εφόσον τα έχετε ρυθμίσει. Μπορείτε να επιλέξετε να τα παρακάμψετε χρησιμοποιώντας τον παρακάτω διακόπτη εναλλαγής.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Λογότυπο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "override_default_logo.label" : {
+    "message" : "Παράκαμψη προεπιλεγμένου λογότυπου σε αυτό το πρότυπο",
+    "description" : "",
+    "placeholders" : null
+  }
+}

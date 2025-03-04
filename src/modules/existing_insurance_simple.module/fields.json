@@ -1,0 +1,63 @@
+[ {
+  "id" : "571c1e40-38a1-d3f2-996d-dd1abff0dd08",
+  "name" : "text",
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h3>Versicherungen sind nie ohne Grund billiger!</h3>\n<p style=\"font-size: 16px;\">Wir hören <strong>täglich Horror-Geschichten</strong> von Hundebesitzern, die im Internet irgendwelche Versicherungen abschließen, ohne das Kleingedruckte gelesen zu haben. Online-Versicherungen locken mit vermeintlich günstigen Preisen, aber zahlen dann in den ersten Jahren nichts oder sehr wenig aus (petolo), schließen bestimmte Krankheiten komplett aus, kündigen direkt nach der ersten eingereichten Rechnung oder geben teure OP-Versicherungen für eine volle Krankenversicherung aus. Wir sind unabhängige Makler für Tierversicherungen und können dich <strong>zu allen Tarifen von allen Gesellschaften</strong> beraten. Fragt uns einfach!</p>"
+}, {
+  "id" : "21ab005e-5459-41e8-29cf-d5dec89fccb2",
+  "name" : "background_color",
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "display_width" : null,
+  "default" : {
+    "color" : "#FFFFFF",
+    "opacity" : 100
+  }
+}, {
+  "id" : "cd05e43f-836e-23d7-a50d-4da54504dfb5",
+  "name" : "border_color",
+  "label" : "Border Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "display_width" : null,
+  "default" : {
+    "color" : null,
+    "opacity" : null
+  }
+}, {
+  "id" : "5a548d3f-0503-fd50-59f7-7c33b53127ab",
+  "name" : "border_width",
+  "label" : "Border Width",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "suffix" : "px",
+  "type" : "number",
+  "display_width" : null,
+  "default" : 2
+}, {
+  "id" : "8396e2bd-f8c0-d8a0-4122-b103489bb89b",
+  "name" : "no_display_breeds",
+  "label" : "Breeds NOT to display for",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null
+} ]

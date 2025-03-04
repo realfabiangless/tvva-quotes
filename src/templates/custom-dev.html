@@ -1,0 +1,87 @@
+<!--
+  templateType: quote
+  isAvailableForNewContent: true
+  label: Custom
+  screenshotPath: ../images/original.png
+-->
+
+{% from '../imports/mock_data.html' import SAMPLE_TEMPLATE_DATA as mock_data %}
+
+{% set template_data = template_data || mock_data %}
+{% set module_data = template_data.module_data %}
+{% set QUOTE = template_data.quote || mock_data.quote %}
+{% set CURRENCY = QUOTE.hs_currency || 'USD' %}
+{% set LOCALE = QUOTE.hs_locale || 'en-US' %}
+{% set TIMEZONE = QUOTE.hs_timezone || 'US/Eastern' %}
+{% set ASSOCIATED_OBJECTS = QUOTE.associated_objects %}
+{% set LINE_ITEMS = ASSOCIATED_OBJECTS.line_items_by_start_date ? ASSOCIATED_OBJECTS.line_items_by_start_date.PRESENT : ASSOCIATED_OBJECTS.line_items %}
+{% set ADDITIONAL_FEES = ASSOCIATED_OBJECTS.additional_fees %}
+{% set RECIPIENT_CONTACTS = ASSOCIATED_OBJECTS.contacts %}
+{% set DEAL = ASSOCIATED_OBJECTS.deal %}
+{% set RECIPIENT_COMPANY = ASSOCIATED_OBJECTS.company %}
+{% set TOTALS = ASSOCIATED_OBJECTS.totals %}
+{% set QUOTE_TOTAL = TOTALS.total_first_payment || mock_data.associated_objects.totals.total_first_payment %}
+{% set SUB_TOTALS = TOTALS.subtotals %}
+{% set customobject = DEAL.associated_objects.custom_objects["_2_114893978"] %}
+
+{% extends './layouts/base.html' %}
+
+{% block stylesheet %}
+  {{ require_css(get_asset_url("../css/output-dev.css")) }}
+  {{ require_css(get_asset_url("../css/_custom-table.css")) }}
+{% endblock stylesheet %}
+
+{% require_js %}
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+{% end_require_js %}
+
+
+
+{% block body %}
+<body class="t-quotes">
+  <div class="t-quotes-wrapper max-w-5xl mx-auto">
+
+    <div class="t-info">
+      <div class="t-recipient">
+        <div class="t-recipient-text">
+           {{ QUOTE.hs_title }}
+        </div>
+        <div class="t-recipient-image">
+          {% module "header_image" lable="Header Image" path="@hubspot/image" %}
+        </div>
+      </div>
+      <div class="t-sender">
+        {% module "logo" path="../modules/quote_logo" %}
+        {{ QUOTE.hs_sender_company_address }} | {{QUOTE.hs_sender_company_zip}} {{QUOTE.hs_sender_company_city}}<br>
+        {{ QUOTE.hs_sender_email }}<br>
+        {{ QUOTE.hs_sender_phone }}<br>
+      </div>
+    </div>
+    
+    {% module "other_products" label="Other products" path="../modules/other_products" %}
+    
+    {% module "exsisting_insurance" label="Existing Insurance" path="../modules/existing_insurance_simple" no_wrapper=True %}
+
+    {% module "table" lable="Custom Table" path="../modules/custom_table-dev" %}
+    
+    {% module "additional_table" lable="Additional Custom Table" path="../modules/custom_table_additional" %}
+    
+    {% module "customer_reviews" lable="Customer Reviews" path="../modules/customer_reviews" %}
+
+    <div class="t-footer_info print">
+      <svg width="100%" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="2" fill="#FF9700"/>
+      </svg>
+
+      <div class="t-footer_info-items">
+        <p>Angebot vom {{ QUOTE.hs_createdate|int|format_date('long', TIMEZONE, LOCALE) }}</p>
+        <img src="https://139679546.fs1.hubspotusercontent-eu1.net/hubfs/139679546/Makler%20icon%20Pfote%20gelb%20(1).png" alt="Die Tierversicherer Paw Favicon" width="20px" height="20px">
+      </div>
+    </div>
+    
+  </div>
+  
+</body>
+  
+{% endblock body %}
+

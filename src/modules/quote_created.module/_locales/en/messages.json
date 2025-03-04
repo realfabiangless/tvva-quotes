@@ -1,0 +1,32 @@
+{
+  "name" : {
+    "message" : "quote_created",
+    "description" : "",
+    "placeholders" : null
+  },
+  "quote_created_text.default" : {
+    "message" : "Angebot vom",
+    "description" : "",
+    "placeholders" : null
+  },
+  "quote_created_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "quote_created_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "quote_created_text.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "quote_created_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

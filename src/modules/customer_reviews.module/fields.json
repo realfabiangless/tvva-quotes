@@ -1,0 +1,120 @@
+[ {
+  "id" : "2b33e86f-298b-275d-c69b-5b18fb6fba25",
+  "name" : "reviews",
+  "label" : "Reviews",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "eead1722-fe6c-ec8b-a041-5b962594275d",
+    "name" : "content",
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null
+  }, {
+    "id" : "7e3f6055-34b2-5437-cad3-1c599be1310a",
+    "name" : "avatar_text_color",
+    "label" : "Avatar Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
+    "id" : "91bb6eae-749e-f3ff-bf73-5bb275f2dd02",
+    "name" : "avatar_background_color",
+    "label" : "Avatar Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
+    "id" : "a9dffa3a-b5ae-f7b6-caed-e8747d7a147d",
+    "name" : "date_text",
+    "label" : "Date Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "vor 6 Tagen"
+  }, {
+    "id" : "b72fb931-1a59-5852-eb35-d6f1b2c785d4",
+    "name" : "user_meta_data",
+    "label" : "User Meta Data",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "5 Rezensionen · 1 Foto"
+  }, {
+    "id" : "f6d92471-b473-3185-7aad-c58fe11a7abb",
+    "name" : "user_name",
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
+}, {
+  "id" : "c3e52e9b-2f75-b94b-304a-a6a971610fb3",
+  "name" : "five_star_logo",
+  "label" : "Five Star Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://139679546.fs1.hubspotusercontent-eu1.net/hubfs/139679546/Group%20358.svg",
+    "alt" : "Five Star Logo",
+    "loading" : "lazy",
+    "width" : 350,
+    "height" : 120,
+    "max_width" : 350,
+    "max_height" : 120
+  }
+}, {
+  "id" : "28678c4e-5f7b-6441-82af-a16709d79cc8",
+  "name" : "more_reviews_text",
+  "label" : "More Reviews Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Weitere Kundenbewertungen anzeigen"
+} ]

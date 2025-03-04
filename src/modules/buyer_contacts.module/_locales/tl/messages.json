@@ -1,0 +1,22 @@
+{
+  "name" : {
+    "message" : "Mga contact ng bumibili",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_email.label" : {
+    "message" : "Contact email ng bumibili",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_name.label" : {
+    "message" : "Pangalan ng contact ng bumibili",
+    "description" : "",
+    "placeholders" : null
+  },
+  "show_contact_phone.label" : {
+    "message" : "Matatawagang telepono ng bumibili",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,32 @@
+.t-other_products-title {
+  padding: 15px 0;
+}
+
+.t-other_products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.t-other-product {
+  display: inline;
+  padding: 8px;
+}
+
+.t-other-product h3 {
+  display: inline; 
+}
+
+.t-other-product p {
+  display: inline; 
+
+}
+
+
+@media screen and (max-width:760px) {
+  .t-other-product {
+    padding: 0px;
+  }
+  .t-other_products {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "quote-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel hubspot:watch tailwind:watch",
+    "upload": "npm-run-all hubspot:upload tailwind:build",
+    "hubspot:watch": "hs watch ./src custom-quote-theme",
+    "hubspot:upload": "hs upload ./src custom-quote-theme",
+    "tailwind:build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
+    "tailwind:watch": "tailwindcss -i ./src/css/input-dev.css -o ./src/css/output-dev.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.9",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
