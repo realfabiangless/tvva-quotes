@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
 @page {
@@ -17,7 +19,6 @@ span,
 p,
 div {
   font-family: "Outfit", sans-serif;
-  margin: 0;
 }
 
 p {
@@ -38,13 +39,13 @@ h3 {
 
 @media screen and (max-width: 760px) {
   h1 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
   }
 
   h2 {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    font-size: 1.1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
   }
   h3 {
     font-size: 1rem;
@@ -70,18 +71,18 @@ button > a {
 
 .t-quotes-wrapper {
   background: #fff;
-  max-width: 1000px;
   margin: 0 auto;
   padding: 20px 25px;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
   gap: 60px;
 }
 
 @media screen and (max-width: 600px) {
   .t-quotes-wrapper {
     gap: 35px;
-    padding: 1rem;
+    padding: 15px 10px;
   }
 }
 
@@ -115,7 +116,7 @@ button > a {
 }
 
 .t-recipient-text {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .t-footer_info {

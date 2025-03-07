@@ -1,21 +1,20 @@
 .property-dropdown {
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
-  appearance:none; 
-  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
+  background-position-x: 95%;
   background-position-y: 50%;
-  border-radius: 2px;
-  margin: 0 3px;
-  line-height: 1.5;
-  padding-bottom: 2px;
-  padding-right: 2rem;
-  border-bottom: 2px solid #FF9700;
+  background-repeat: no-repeat;
+  border: 2px solid #ff9700;
+  border-radius: 99999px;
   font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0.5rem 1.25rem;
   position: relative;
-  font-weight: bold;
+  padding-right: 2.5rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .property-wrapper {
@@ -98,7 +97,7 @@
   right: 10px;
   background: transparent;
   top: 50%;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
   width: 40px;
   height: 40px;
 }
@@ -118,7 +117,7 @@
 
   .t-table-scroll {
     scroll-snap-type: x mandatory;
-    scroll-snap-points-y: repeat(50%));
+    scroll-snap-points-y: repeat(50%);
     overflow: scroll;
     justify-content: flex-start;
   }
@@ -130,20 +129,18 @@
   }
 }
 
-.t-column {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
 .t-cell {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 65px;
   padding: 10px;
-  border-bottom: 1px solid black;
   overflow-wrap: break-word;
   word-break: break-word;
   min-width: 0;
+}
+
+.t-cell:not(:last-child) {
+  border-bottom: 1px solid black;
 }
 
 .t-column.static {
@@ -165,7 +162,7 @@
 }
 
 .t-cell.t-select_item {
-  height: 80px;
+  height: 100px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -174,10 +171,24 @@
 
 .t-select_item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3px;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.t-select_item h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.t-select_item h4 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .t-select_item h4 {
+    font-size: 1rem;
+  }
 }
 
 .t-select_item.active {
@@ -189,7 +200,7 @@
 }
 
 .t-select_item p {
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 
 .t-button {
@@ -198,23 +209,36 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 15px;
-  border: 1px solid #FF9700;
-  padding: 5px 8px;
-  font-weight: bold;
+  border-radius: 9999px;
+  border: 2px solid;
+  border-color: #ff9700;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.t-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .t-button-fill {
-  background: #FF9700;
+  background: #ff9700;
   color: #fff;
 }
 
 .t-button-outline {
   background: #fff;
-  color: #FF9700;
+  color: #ff9700;
 }
 
-.t-button-outline:hover, .t-button-outline:active, .t-button-outline.active {
-  background: #FF9700;
+.t-button-outline:hover,
+.t-button-outline:active,
+.t-button-outline.active {
+  background: #ff9700;
   color: #fff;
 }
 
@@ -233,14 +257,7 @@
 .t-select-product {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-}
-
-.t-select_description {
-  display: flex;
-  gap: 10px;
-  flex: 1;
-  align-items: center;
+  gap: 24px;
 }
 
 .t-chosen_product {
@@ -258,7 +275,7 @@
 }
 
 .t-your_choice-text {
-  font-size: 10px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding-bottom: 3px;
 }
@@ -267,14 +284,169 @@
   display: none;
 }
 
-@media screen and (max-width:760px) {
+/* Radio card styles */
+.radio-cards-container {
+  margin-bottom: 20px;
+}
+
+.radio-cards-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.radio-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radio-card {
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .radio-card {
+    min-width: unset;
+  }
+}
+
+.radio-card:hover {
+  background-color: #fffbf3;
+}
+
+.radio-card:hover:not(.radio-card-selected) {
+  border-color: #ffe7cb;
+}
+
+.radio-card-selected {
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 1px #ff8c00;
+}
+
+.radio-card-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.radio-card-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-card-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-card-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff8c00;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.radio-card-selected .radio-card-circle {
+  border-color: #ff8c00;
+}
+
+.radio-card-selected .radio-card-circle::after {
+  opacity: 1;
+}
+
+.radio-card-text {
+  flex: 1;
+}
+
+.radio-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.radio-card-description {
+  margin: 0;
+  font-size: 14px;
+  color: #718096;
+}
+
+.confirmation-message {
+  color: #008e6f;
+  font-weight: bold;
+}
+
+.t-button.selectable {
+  height: 40px;
+  width: 170px;
+}
+
+.t-button.selected {
+  background-color: #008e6f;
+  color: white;
+}
+
+.t-button.active {
+  background-color: #008e6f;
+  color: white;
+}
+
+.t-cell-image.positive {
+  filter: grayscale(1) brightness(0);
+}
+
+/* Loading spinner animation */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 760px) {
   .t-select_description {
     flex-direction: column;
   }
 }
 
 @media print {
-  .t-button, .t-step, .t-chosen_product {
+  .t-button,
+  .t-step,
+  .t-chosen_product {
     display: none;
   }
   .t-table {

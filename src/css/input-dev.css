@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
 @page {
@@ -17,7 +19,6 @@ span,
 p,
 div {
   font-family: "Outfit", sans-serif;
-  margin: 0;
 }
 
 p {

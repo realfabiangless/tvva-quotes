@@ -13,16 +13,15 @@
 }
 
 .t-other-product h3 {
-  display: inline; 
+  display: inline;
+  font-weight: 600;
 }
 
 .t-other-product p {
-  display: inline; 
-
+  display: inline;
 }
 
-
-@media screen and (max-width:760px) {
+@media screen and (max-width: 760px) {
   .t-other-product {
     padding: 0px;
   }

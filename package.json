@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel hubspot:watch tailwind:watch",
-    "upload": "npm-run-all hubspot:upload tailwind:build",
+    "upload": "npm-run-all tailwind:build hubspot:upload ",
     "hubspot:watch": "hs watch ./src custom-quote-theme",
     "hubspot:upload": "hs upload ./src custom-quote-theme",
     "tailwind:build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
@@ -18,6 +18,7 @@
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "npm-run-all": "^4.1.5"
   }
 }

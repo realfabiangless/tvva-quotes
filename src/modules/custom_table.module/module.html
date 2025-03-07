@@ -24,8 +24,12 @@
   {% do remap_dict.put(property_key, value_map) %}
 {% endfor %}
 
+{% macro render_color(color) -%}
+  rgba({{color.color|convert_rgb}}, {{color.opacity != null ? color.opacity / 100 : 1}})
+{%- endmacro %}
+
 {% set properties_data = {} %}
-  {% for i in module.table.properties %}
+{% for i in module.table.properties %}
   {% set property_name = i.display %}
   {% set property_value = i.value|lower %}
   {% set property_info = { "name": property_name, "value": property_value } %}
@@ -47,67 +51,112 @@
 
 {% set overall = {val : 0} %}
 
+{% set initial_values = {} %}
+
+{% for property in module.properties %}
+  {% set default_value = { value: "" } %}
+
+  {% for option in property.choices %}
+    {% if DEAL[option.default.property_value] and DEAL[option.default.property_value] == option.default.choice_value %}
+      {% do default_value.update({ value: option.value }) %}
+    {% elif loop.first and not default_value %}
+      {% do default_value.update({ value: option.value }) %}
+    {% endif %}
+  {% endfor %}
+
+  {% do initial_values.put(property.value, default_value.value) %}
+{% endfor %}
+
 {% macro filter_properties(items) %}
   {% set options_map = {} %}
-  <div class="property-wrapper">
-    <div class="property-wrapper-properties">
+  <div class="property-wrapper w-full sm:w-auto" 
+       x-data="{ selectedOptions: {{ initial_values|tojson|replace('"', "'") }} }" 
+       x-init="$dispatch('init-filters', selectedOptions)">
+    <div class="flex flex-col gap-4 w-full sm:w-auto">
       {% for property in module.properties %}
       {# Initialize a temporary variable for the property's options #}
-      {% set temp_options = [] %}
+        {% set temp_options = [] %}
 
-      {# Collect all values of this property from items #}
-      {% for item in items %}
-        {% if property.value in item %}
-          {% set _ = temp_options.append(item[property.value]) %}
-        {% endif %}
-      {% endfor %}
+        {# Collect all values of this property from items #}
+        {% for item in items %}
+          {% if property.value in item %}
+            {% set _ = temp_options.append(item[property.value]) %}
+          {% endif %}
+        {% endfor %}
 
-      {# Update the options_map with the temporary list for this property #}
-      {% do options_map.put(property.value, temp_options) %}
-      <span style="position:relative">
-        <select class="property-dropdown" name="{{ property.value }}">
-          {% for option in property.choices %}
-            {% if option.value in options_map[property.value] %}
-              <option {% if DEAL[option.default.property_value] %}
-                      {% if DEAL[option.default.property_value] == option.default.choice_value %}
-                      selected
-                      {% endif %} 
-                      {% else %}
-                      {% if loop.first %}selected{% endif %}
-                      {% endif %}
-                      value="{{ option.value }}"
-                      >
-                {{ option.Label }}
-              </option>
-            {% endif %}
-          {% endfor %}
-        </select>
-      </span>
+        {# Update the options_map with the temporary list for this property #}
+        {% do options_map.put(property.value, temp_options) %}
+        
+        <div class="" x-data="{
+          propertyName: '{{ property.value }}',
+          selectOption(value) {
+            this.selectedOptions[this.propertyName] = value;
+            $dispatch('filter-changed', this.selectedOptions);
+          }
+        }">
+          <span class="font-semibold text-base mb-1 block">{{ property.Label }}</span>
+          <div class="flex flex-col sm:flex-row gap-4">
+            {% for option in property.choices %}
+              {% if option.value in options_map[property.value] %}
+                {% set is_default = false %}
+                {% if DEAL[option.default.property_value] and DEAL[option.default.property_value] == option.default.choice_value %}
+                  {% set is_default = true %}
+                {% elif loop.first and not is_default and not DEAL[option.default.property_value] %}
+                  {% set is_default = true %}
+                {% endif %}
+                
+                <label class="radio-card" 
+                      :class="{'radio-card-selected': selectedOptions['{{ property.value }}'] === '{{ option.value }}'}">
+                  <input type="radio" 
+                        name="{{ property.value }}" 
+                        value="{{ option.value }}" 
+                        {% if is_default %}checked{% endif %}
+                        x-model="selectedOptions['{{ property.value }}']"
+                        @change="selectOption('{{ option.value }}')" 
+                        class="radio-card-input">
+                  <div class="radio-card-content">
+                 
+                    <div class="radio-card-text">
+                      <h3 class="radio-card-title break-all sm:break-normal hyphens-auto">{{ option.Label }}</h3>
+                      {# {% if option.description %}
+                      <p class="radio-card-description">{{ option.description }}</p>
+                      {% endif %} #}
+                    </div>
+                    <div class="radio-card-check">
+                      <div class="radio-card-circle"></div>
+                    </div>
+                  </div>
+                </label>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       {% endfor %}
     </div>
-    <div class="property-helper">
+    {# <div class="property-helper">
       <img src="{{ get_asset_url('../../images/arrow.svg') }}" alt="Accent arrow" class="property-helper-arrow" height="50"/>
       <p class="property-helper-text">{{ module.helper_text }}</p>
-    </div>
+    </div> #}
   </div>
-
 {% endmacro %}
-
-
 
 {% macro remap_value(property, value) %}
   {{ value in remap_dict[property] ? remap_dict[property][value]|render : value }}
 {% endmacro %}
 
-
-
-<div class="t-table-wrapper">
-  <h2>
-    Unsere Empfehlung für <b>{{QUOTE.hs_title|cut("Angebotsvorschlag für") }}: </b>eine
+<div class="t-table-wrapper" 
+     x-data="tableApp" 
+     @filter-changed.window="handleFilterChange($event.detail)"
+     @init-filters.window="initializeFilters($event.detail)">
+  <h2 class="text-lg">
+    Unsere Empfehlung für <b>{{QUOTE.hs_title|cut("Angebotsvorschlag für") }}: </b>
     {{ filter_properties(LINE_ITEMS) }}
   </h2>
-  <p class="error-text" id="errorText">{{ module.error_text }}</p>
-  <div class="t-table">
+  <p class="error-text" x-show="showError">{{ module.error_text }}</p>
+  
+
+
+  <div class="t-table" x-show="!showError">
     <div class="t-column static">
       <div class="t-cell t-select_item">
         {#Empty cell for name row#}
@@ -118,23 +167,39 @@
       </div>
       {% endfor %}
     </div>
-    <div class="t-table-scroll">
+    <div class="t-table-scroll relative" x-ref="scrollContainer">
+
+      <!-- Add no results message -->
+      <div class="text-center absolute top-8 left-4 md:left-8" x-show="!hasVisibleProducts && !showError" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
+        <p class="text-lg text-gray-600">Leider sind keine Produkte für diese Auswahl verfügbar.</p>
+      </div>
+
       {% for item in LINE_ITEMS|sort(false, false, "sort") %}
         {% if item["art_der_absicherung"] != "Haftpflichtversicherung" %}
           <div class="t-column t-filter-product {% if item["intention_innerhalb_angebot"] == "Empfehlung" %}positive{% elif item["intention_innerhalb_angebot"] == "Negativ Beispiel" %}negative{% endif %}"
               {% for property in module.properties %}data-{{property.value}}="{{ item[property.value] }}"{% endfor %}
               data-product-recommendation="{{ item["intention_innerhalb_angebot"] }}"
-              >
-            <div class="t-cell t-select_item t-text-center">
+              x-show="isProductVisible($el)"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 translate-y-4"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              style="transition-delay: {% if item["intention_innerhalb_angebot"] == "Empfehlung" %}0ms{% elif item["intention_innerhalb_angebot"] == "Alternative 1" %}100ms{% elif item["intention_innerhalb_angebot"] == "Alternative 2" %}200ms{% else %}300ms{% endif %};"
+            >
+            <div class="t-cell t-select_item t-text-center font-bold">
               <h4>{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"]) }}</h4>
             </div>
             {% for property in properties_data %}
             {% set numTest = item[property.value]|int %} {# If this is all in one line it doesn't work #}
             <div class="t-cell dynamic">
-              {% if item[property.value] == "true" or item[property.value] == "ja" %}
-              <img class="t-cell-image" src="{{ module.table.image_true.src }}" width="15px" height="15px" alt="{{ module.table.image_true.alt }}">
-              {% elif item[property.value] == "false" or item[property.value] == "nein" %}
-                <img class="t-cell-image" src="{{ module.table.image_false.src }}" width="15px" height="15px" alt="{{ module.table.image_false.alt }}">
+              {% if item[property.value] == "true" or item[property.value]|lower == "ja" %}
+              <img class="t-cell-image {% if item["intention_innerhalb_angebot"] == "Empfehlung" %}positive{% endif %}" 
+              src="{{ module.table.image_true.src }}" 
+              width="15px" 
+              height="15px" 
+              alt="{{ module.table.image_true.alt }}"
+              >
+              {% elif item[property.value] == "false" or item[property.value]|lower == "nein" %}
+                <img class="t-cell-image {% if item["intention_innerhalb_angebot"] == "Empfehlung" %}positive{% endif %}" src="{{ module.table.image_false.src }}" width="15px" height="15px" alt="{{ module.table.image_false.alt }}">
               {% elif numTest is integer and numTest != 0 %}
                 <p>{{ item[property.value]|format_currency("de-DE", "EUR") }}</p>
               {% else %}
@@ -146,7 +211,7 @@
           {% do overall.update({val: overall.val + 1 }) %}
         {% endif %}
       {% endfor %}
-      <button class="t-table-next_button" id="nextButton">
+      <button class="t-table-next_button" @click="scrollNext()">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 6L15 12L9 18" stroke="#008e6f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -162,74 +227,105 @@
 
 
   <div class="t-select">
-    <h2>{{ module.select.title }}</h2>
+    <h2 class="font-bold">{{ module.select.title }}</h2>
     {% for item in LINE_ITEMS|sort(false, false, "sort") %}
       {% if item["art_der_absicherung"] != "Haftpflichtversicherung" %}
-        <div class="t-select-product t-filter-product" id="product" 
+        <div class="t-select-product t-filter-product transition-all duration-300 border-2 border-transparent rounded-lg" 
+            :class="{'p-4 bg-orange-300/10 !border-orange-300': isSelected('{{ item["hs_object_id"] }}')}"
             data-product-id="{{item["hs_object_id"]}}" 
             data-product-recommendation="{{ item["intention_innerhalb_angebot"] }}"
             data-product-recommendation-remap="{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"])|render|trim }}"
-            {% for property in module.properties %}data-{{property.value}}="{{ item[property.value] }}"{% endfor %}   
+            {% for property in module.properties %}data-{{property.value}}="{{ item[property.value] }}"{% endfor %}
+            x-show="isProductVisible($el)"
             >
           <div class="t-select_item">
-            <h3 id="productRecommendation">{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"]) }}</h3>
+            <h3 id="productRecommendation" class="font-bold">{{ remap_value("intention_innerhalb_angebot", item["intention_innerhalb_angebot"]) }}</h3>
             {% if item["intention_innerhalb_angebot"] != "Negativ Beispiel" %}
               {% if module.enable_select %}
-                <button id="select" class="t-button t-button-outline">
-                  <p>{{ module.select.button_text }}</p>
-                </button>
+                {# <button class="t-button t-button-outline" 
+                        :class="{ 'active': isSelected('{{ item["hs_object_id"] }}') }"
+                        @click="selectProduct('{{ item["hs_object_id"] }}', $event)">
+                  <span x-show="!isLoading('{{ item["hs_object_id"] }}')">{{ module.select.button_text }}</span>
+                  <span x-show="isLoading('{{ item["hs_object_id"] }}')" class="loading-spinner"></span>
+                </button> #}
               {% else %}
-                <a id="select" class="t-button t-button-outline" href="https://hook.eu1.make.com/js6i0arlv3firw7lo24jv5511bd5cf75?line-item_id={{ item["hs_object_id"] }}">
-                  {{ module.select.button_text }}
-                </a>
+                <button class="t-button t-button-outline selectable"
+                        :disabled="submitting || isSelected('{{ item["hs_object_id"] }}')"
+                        @click="submitSelectedProduct('{{ item["hs_object_id"] }}', $event)"
+                        :class="{'selected-button': isSelected('{{ item["hs_object_id"] }}')}"
+                        >
+
+                  <span x-show="!isLoading('{{ item["hs_object_id"] }}') && !isSelected('{{ item["hs_object_id"] }}')">{{ module.select.button_text }}</span>
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" x-show="isLoading('{{ item["hs_object_id"] }}')" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin">
+                    <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                  </svg>
+                  
+                  <!-- Checkmark icon shown after successful selection -->
+                  <svg xmlns="http://www.w3.org/2000/svg" x-show="isSelected('{{ item["hs_object_id"] }}')" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </button>
               {% endif %}
             {% endif %}
           </div>
+
+          <!-- Confirmation message shown after selection -->
+          <div class="selection-confirmation-message" x-show="isSelected('{{ item["hs_object_id"] }}')">
+            {{ module.select.confirmation_text || "Danke 🙂 Wir melden uns zeitnah bei dir." }}
+          </div>
+
           {% if item[module.select.internal_name] %}
-            <p class="t-select_description">{{ item[module.select.internal_name] }}</p>
+            <div class="t-select_description prose max-w-none">
+              <p>{{ item[module.select.internal_name] }}</p>
+            </div>
           {% endif %}
+
+  
         </div>
+
+
       {% endif %}
     {% endfor %}
   </div>
 
+  {# {% if module.enable_select %}
+    <div class="t-step">
+      {{ module.step.step_2 }}
+    </div>
 
-
-  {% if module.enable_select %}
-
-  <div class="t-step">
-    {{ module.step.step_2 }}
-  </div>
-
-  <div class="t-chosen_product">
-    <div class="t-your_choice">
-      <div class="t-your_choice-text">{{ module.product.text }}</div>
-      <div id="activeProduct" data-product-id="" class="t-select_item">
-        <h3 id="activeProductRecommendation"></h3>
-      </div>
-    </div>    
-    <button id="submit" class="t-button t-button-fill">
-      <a target="_blank" rel="noopener noreferrer">{{ module.product.button_text }}</a>
-    </button>
-    <p>
-      {{ module.product.submit_information }}
-    </p>
-  </div>
-
-  {% endif %}
+    <div class="t-chosen_product">
+      <div class="t-your_choice">
+        <div class="t-your_choice-text">{{ module.product.text }}</div>
+        <div id="activeProduct" class="t-select_item">
+          <h3 id="activeProductRecommendation" x-text="activeProductRecommendation"></h3>
+        </div>
+      </div>    
+      <button id="submit" class="t-button t-button-fill" @click="submitSelection">
+        <span x-show="!submitting">{{ module.product.button_text }}</span>
+        <span x-show="submitting" class="loading-spinner"></span>
+      </button>
+      <p x-show="!selectionConfirmed">
+        {{ module.product.submit_information }}
+      </p>
+      <p x-show="selectionConfirmed" class="confirmation-message">
+        Vielen Dank für Ihre Auswahl. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.
+      </p>
+    </div>
+  {% endif %} #}
 </div>
 
 
 {% require_css %}
 <style>
   .t-column.negative {
-    background: {{ module.styles.negative.background_color.color }};
-    color: {{ module.styles.negative.text_color.color }};
+    background: {{ render_color(module.styles.negative.background_color) }};
+    color: {{ render_color(module.styles.negative.text_color) }};
   }
 
   .t-column.positive {
-    background: {{ module.styles.positive.background_color.color }};
-    color: {{ module.styles.positive.text_color.color }};
+    background: {{ render_color(module.styles.positive.background_color) }};
+    color: {{ render_color(module.styles.positive.text_color) }};
   }
 
   .t-table {
@@ -254,150 +350,175 @@
       /*Code to make columns snap into place on mobile*/
     }
   }
+
+
+  
+  .t-button.selected-button {
+    background-color: {{ render_color(module.styles.positive.background_color) }} !important;
+    border-color: {{ render_color(module.styles.positive.background_color) }} !important;
+    color: white;
+    opacity: 0.9;
+    cursor: default;
+  }
+  
+  .selection-confirmation-message {
+    color: {{ render_color(module.styles.positive.text_color) }};
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
 </style>
 {% end_require_css %}
 
 
 {% require_js %}
 <script>
-  document.addEventListener('DOMContentLoaded', async function() {
-    const selectedOptions = {}; // Object to store selected options
-    const products = document.querySelectorAll('.t-select-product');
-    const filterProducts = document.querySelectorAll('.t-filter-product')
-    const scrollContainer = document.querySelector('.t-table-scroll');
-    const nextButton = document.querySelector('.t-table-next_button');
-    let activeProductId, activeProductRecommendation;
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('tableApp', () => ({
+      loadingItems: {},
+      selectedItems: {},
 
-    // Initialize selected options based on checked radio buttons
-    document.querySelectorAll('.property-dropdown').forEach(function(select) {
-      selectedOptions[select.name] = select.value;
-    });
+      submitting: false,
+      
+      submittedProduct: null,
 
-    // Apply initial filter and update active product
-    filterLineItems();
-    updateActiveProduct();
+      selectedOptions: {{ initial_values|tojson }},
+      showError: false,
+      hasVisibleProducts: true,
+      hasFilteredOnce: false,
+      
+      
+      initializeFilters(options) {
+        this.selectedOptions = { ...options };
+        this.updateVisibleProducts();
+      },
+      
+      handleFilterChange(options) {
+        this.selectedOptions = { ...this.selectedOptions, ...options };
+        this.updateVisibleProducts();
 
-    // Attach event listeners to all radio buttons
-    document.querySelectorAll('.property-dropdown').forEach(function(radio) {
-      radio.addEventListener('change', handleSelectChange);
-    });
-
-    // Handle radio button change
-    function handleSelectChange(event) {
-      selectedOptions[event.target.name] = event.target.value;
-      filterLineItems();
-      updateActiveProduct();
-    }
-
-    // Filter line items based on selected options
-    function filterLineItems() {
-      filterProducts.forEach(function(item) {
+        // Track first filter interaction
+        if (!this.hasFilteredOnce) {
+          _hsq.push([
+            'trackCustomBehavioralEvent',
+            {
+              name: "pe139679546_filter_selected_in_quote",
+            },
+          ]);
+          this.hasFilteredOnce = true;
+        }
+      },
+      
+      updateVisibleProducts() {
+        // Check if any products are visible after a small delay to allow DOM updates
+        setTimeout(() => {
+          const visibleProducts = document.querySelectorAll('.t-filter-product:not([style*="display: none"])');
+          this.hasVisibleProducts = visibleProducts.length > 0;
+        }, 50);
+      },
+      
+      isProductVisible(element) {
         let matchesAllCriteria = true;
-        for (const property in selectedOptions) {
-          if (item.dataset[property] !== selectedOptions[property]) {
+        
+        for (const property in this.selectedOptions) {
+          if (element.dataset[property] !== this.selectedOptions[property]) {
             matchesAllCriteria = false;
             break;
           }
         }
-        item.style.display = matchesAllCriteria ? '' : 'none';
-      });
-    } 
-
-    function findProductByRecommendations(recommendations) {
-      for (let recommendation of recommendations) {
-        let product = document.querySelector(`.t-select-product[data-product-recommendation="${recommendation}"]:not([style*="display: none"])`);
-        if (product) {
-          return product;
+        return matchesAllCriteria;
+      },
+      
+      findProductByRecommendations(recommendations) {
+        for (let recommendation of recommendations) {
+          let product = document.querySelector(`.t-select-product[data-product-recommendation="${recommendation}"]:not([style*="display: none"])`);
+          if (product) {
+            return product;
+          }
         }
-      }
-      return null;
-    }
-
-    function updateActiveProduct(product) {
-      {% if module.enable_select %}
-
-      // Remove the active class from all buttons
-      document.querySelectorAll('.t-button-outline.active').forEach(function(button) {
-        button.classList.remove('active');
-      });
-
-
-      // If no product is passed, try to select the 'Empfehlung' product that is not hidden
-      if (!product) {
-        const recommendations = ["Empfehlung", "Alternative 1", "Alternative 2"];
-        product = findProductByRecommendations(recommendations);
-      }
-
-
-      if (product) {
-        document.querySelector('#errorText').style.display = 'none';
-        document.querySelector('.t-table').style.display = 'grid';
-
-        var activeButton = product.querySelector('.t-button-outline');
-        if (activeButton) {
-          activeButton.classList.add('active');
+        return null;
+      },
+      
+      
+      isLoading(itemId) {
+        return this.loadingItems[itemId] === true;
+      },
+      
+      isSelected(itemId) {
+        return this.selectedItems[itemId] === true;
+      },
+      
+      scrollNext() {
+        const scrollContainer = this.$refs.scrollContainer;
+        const snapWidth = scrollContainer.scrollWidth / scrollContainer.childElementCount;
+        const currentScroll = scrollContainer.scrollLeft;
+        const nextScroll = currentScroll === 0 ? snapWidth : Math.ceil(currentScroll / snapWidth) * snapWidth;
+        scrollContainer.scrollTo({ left: nextScroll, behavior: 'smooth' });
+      },
+      
+      async submitSelectedProduct(itemId, event) {
+        // Don't proceed if already selected
+        if (this.isSelected(itemId)) {
+          return;
         }
+        
+        // Set loading state
+        this.loadingItems[itemId] = true;
+        this.submitting = true;
+        
+        try {
+          const quoteId = "{{ QUOTE.hs_object_id }}";
+          const dealId = "{{ DEAL.hs_object_id }}";
+          const contactId = "{{ RECIPIENT_CONTACTS[0].hs_object_id }}";
 
-        // Update the active product details
-        var productId = product.dataset.productId;
-        var productRecommendation = product.getAttribute('data-product-recommendation');
+          
+          // Make API call to select line item
+          const response = await fetch(`https://app.die-tierversicherer.de/api/quote/selectLineItem`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              lineItemId: itemId,
+              quoteId: quoteId,
+              dealId: dealId,
+              contactId: contactId
+            })
+          });
 
-        if (product.getAttribute('data-product-recommendation-remap')) {
-          productRecommendation = product.getAttribute('data-product-recommendation-remap');
+          if (!response.ok) {
+            console.error('Failed to select line item:', await response.text());
+            return;
+          }
+
+          _hsq.push([
+            'trackCustomBehavioralEvent',
+            {
+              name: "pe139679546_product_selected_in_quote",
+              properties: {
+                line_item_id: itemId,
+                // intention: this.activeProductRecommendation,
+                // selbstbeteiligung: this.selectedOptions["selbstbeteiligung"],
+                // selbstbeteiligung_amount: this.selectedOptions["selbstbeteiligung_amount"],
+                // art_der_absicherung: this.selectedOptions["art_der_absicherung"]
+              },
+            },
+          ]);
+          
+          // Mark as selected
+          this.selectedItems[itemId] = true;
+        
+          
+        } catch (error) {
+          console.error('Error selecting line item:', error);
+        } finally {
+          // Remove loading state
+          this.loadingItems[itemId] = false;
+          this.submitting = false;
         }
-        updateProduct(productRecommendation, productId);
-        return
-      } else {
-        // Handle the case where all products are hidden
-        handleNoVisibleProducts();
-        return
-      }
-      {% else %}
-      return
-      {% endif %}
-    }
-
-    // Update product details
-    function updateProduct(newProductRecommendation, newProductId) {
-      const submitAnchor = submitButton.querySelector('#submit a');
-      const product = document.querySelector('#activeProduct');
-      const recommendation = product.querySelector('#activeProductRecommendation');
-
-      recommendation.textContent = newProductRecommendation;
-      product.setAttribute('data-product-id', newProductId);
-      activeProductId = newProductId;
-      activeProductRecommendation = newProductRecommendation;
-      submitAnchor.href = `https://hook.eu1.make.com/js6i0arlv3firw7lo24jv5511bd5cf75?line-item_id=${activeProductId}`;
-    }
-
-    // Event listener for the next button in the scroll container
-    nextButton.addEventListener('click', function() {
-      const snapWidth = scrollContainer.scrollWidth / scrollContainer.childElementCount;
-      const currentScroll = scrollContainer.scrollLeft;
-      const nextScroll = currentScroll === 0 ? snapWidth : Math.ceil(currentScroll / snapWidth) * snapWidth;
-      scrollContainer.scrollTo({ left: nextScroll, behavior: 'smooth' });
-    });
-
-    {% if module.enable_select %}
-    // Event listeners for selecting products
-    products.forEach(function(product) {
-      const selectButton = product.querySelector('#select');
-      if (selectButton) {
-        selectButton.addEventListener('click', function() {
-          updateActiveProduct(product);
-        });
-      }
-    });
-    {% endif %}
-
+      },
+    }));
   });
-
-
-  function handleNoVisibleProducts() {
-    document.querySelector('#errorText').style.display = 'block';
-    document.querySelector('.t-table').style.display = 'none';
-  }
-
 </script>
 {% end_require_js %}
 

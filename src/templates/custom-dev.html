@@ -28,13 +28,83 @@
 
 {% block stylesheet %}
   {{ require_css(get_asset_url("../css/output-dev.css")) }}
-  {{ require_css(get_asset_url("../css/_custom-table.css")) }}
+  {{ require_css(get_asset_url("../css/_custom-table-dev.css")) }}
 {% endblock stylesheet %}
 
 {% require_js %}
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/139679546.js"></script>
+  <!-- End of HubSpot Embed Code -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const TRACKING_INTERVAL = 10 * 60 * 1000; // 10 minutes in milliseconds
+      const quoteId = "{{ QUOTE.hs_object_id }}";
+      const dealId = "{{ DEAL.hs_object_id }}";
+      const recipientEmail = "{{ RECIPIENT_CONTACTS[0].email }}";
+      const storageKey = `quote_view_${quoteId}`;
+      
+      function shouldTrackView() {
+        try {
+          const lastTracked = localStorage.getItem(storageKey);
+          if (!lastTracked) return true;
+          
+          const lastTrackedTime = parseInt(lastTracked, 10);
+          const currentTime = new Date().getTime();
+          
+          return (currentTime - lastTrackedTime) > TRACKING_INTERVAL;
+        } catch (e) {
+          // If localStorage is not available (private browsing, etc.)
+          console.warn("LocalStorage not available, tracking view anyway");
+          return true;
+        }
+      }
+      
+      function trackView() {
+        try {
+          localStorage.setItem(storageKey, new Date().getTime().toString());
+        } catch (e) {
+          console.warn("Could not save to localStorage");
+        }
+        
+        function waitForHubSpot() {
+          if (window._hsq) {
+            
+            // First identify the visitor
+            window._hsq.push([
+              'identify',
+              {
+                email: recipientEmail,
+                quote_id: quoteId,
+                deal_id: dealId,
+              }
+            ]);
+            
+            // Then track the custom event
+            window._hsq.push([
+              'trackCustomBehavioralEvent',
+              {
+                name: "pe139679546_quote_opened",
+                properties: {
+                  quote_id: quoteId,
+                },
+              },
+            ]);
+          } else {
+            setTimeout(waitForHubSpot, 100);
+          }
+        }
+        waitForHubSpot();
+      }
+      
+      if (shouldTrackView()) {
+        trackView();
+      } else {
+        console.log("Quote view already tracked within the last 5 minutes");
+      }
+    });
+  </script>
 {% end_require_js %}
-
 
 
 {% block body %}
